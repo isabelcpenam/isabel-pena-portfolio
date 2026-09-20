@@ -2240,9 +2240,6 @@ main {
     color: #F9F9F9;
     font-weight: 400;
 }
-.contact-infos ul li .content p + p {
-    margin-top: 10px;
-}
 .contact-infos ul li .content p {
     font-size: 12px;
     letter-spacing: 0.23px;
@@ -2257,10 +2254,28 @@ main {
 .contact-infos ul li .content p a:hover {
     color: var(--primary);
 }
+.contact-infos ul li .content .contact-methods {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.contact-infos ul li .content .contact-methods p {
+    margin: 0;
+}
+.contact-infos ul li .content .contact-methods p a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(249, 249, 249, 0.65);
+    color: rgba(249, 249, 249, 0.9);
+}
+.contact-infos ul li .content .contact-methods p a:hover {
+    border-color: var(--primary);
+}
 .contact-infos ul li .content .contact-method-icon {
-    display: inline-block;
-    width: 22px;
-    font-size: 18px;
+    font-size: 22px;
     text-align: center;
 }
 .contact-infos ul li .content .shape {
