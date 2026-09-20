@@ -1554,6 +1554,27 @@ main {
 .edc-and-exp-box .img-box img {
     display: block;
 }
+.stack-box .img-box > img {
+    filter: brightness(0) invert(1);
+}
+.stack-box .tool-pair-icon {
+    position: relative;
+}
+.stack-box .tool-pair-icon img {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+}
+.stack-box .tool-pair-icon img:first-child {
+    left: 0;
+    top: 16px;
+    transform: rotate(-8deg);
+}
+.stack-box .tool-pair-icon img:last-child {
+    right: 0;
+    top: 8px;
+    transform: rotate(8deg);
+}
 .edc-and-exp-box .content .date {
     display: block;
     font-size: 10px;
