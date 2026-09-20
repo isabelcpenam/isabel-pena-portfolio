@@ -27,6 +27,10 @@
     <link rel="stylesheet" href="./assets/css/swiper.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
+
+    <!-- ===== Cloudflare Turnstile ===== -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>    
 </head>
 <body>
 
@@ -844,16 +848,29 @@
 
                     <div class="contact-inner">
                         <div class="contact-form">
-                            <form id="ajax-form" action="/submit" method="POST">
-                                <input type="hidden" name="access_key" value="0ea6f02e-35e1-4bc8-801a-f700e7c5a95c">
-                                <input type="hidden" name="subject">
+                            <form id="contact-form" action="/submit" method="POST">
+    
+    <input type="text" name="name" placeholder="Name">
+    <input type="email" placeholder="Email" name="email">
+    <textarea name="message" id="message" placeholder="Message"></textarea>
 
-                                <input type="text" name="name" placeholder="Name">
-                                <input type="email" placeholder="Email" name="email">
-                                <textarea name="message" id="message" placeholder="Message"></textarea>
-                                <button type="submit">Submit</button>
-                                <p class="text-base text-gray-400" style="margin-top: 12px;" id="result"></p>
-                            </form>
+    <!-- Honeypot field -->
+    <div style="display:none;">
+        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+    </div>
+
+    <!-- Cloudflare Turnstile Widget -->
+    <div class="cf-turnstile" 
+         data-sitekey="0x4AAAAAAE9l9Q42IDeD-7fK" 
+         data-callback="enableSubmit" 
+         style="margin-bottom: 15px;">
+    </div>
+
+    <!-- Submit button starts disabled until Turnstile completes -->
+    <button type="submit" id="submit-button" disabled>Submit</button>
+    
+    <p class="text-base text-gray-400" style="margin-top: 12px;" id="result"></p>
+</form>
                         </div>
 
                         <div class="contact-infos">
@@ -971,6 +988,10 @@
                 phi += 0.01
             },
         })
+    <script>
+        function enableSubmit() {
+            document.getElementById('submit-button').disabled = false;
+        }
     </script>
 </body>
 </html>
