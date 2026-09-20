@@ -192,8 +192,14 @@
         <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
     </div>
 
-    <!-- Cloudflare Turnstile Widget -->
-    <div class="cf-turnstile" data-sitekey="0x4AAAAAAE9l9Q42IDeD-7fK" data-callback="enableSubmit" style="margin-bottom: 15px;"></div>
+     <!-- Cloudflare Turnstile Widget -->
+      <div class="cf-turnstile" 
+         data-sitekey="0x4AAAAAAE9l9Q42IDeD-7fK" 
+         data-callback="enableSubmit" 
+         data-error-callback="turnstileError" 
+         data-expired-callback="turnstileExpired" 
+         style="margin-bottom: 15px;">
+    </div>
 
     <!-- Submit button starts disabled until Turnstile completes -->
     <button type="submit" id="submit-button" disabled>Submit</button>
@@ -264,10 +270,19 @@
     <script src="./assets/js/main.js"></script>
     <script>
         function enableSubmit() {
-            document.getElementById("submit-button").disabled = false;
+            document.getElementById('submit-button').disabled = false;
+        }
+
+        function turnstileError() {
+            document.getElementById('submit-button').disabled = true;
+            document.getElementById('result').textContent = 'Security check could not load. Please refresh and try again.';
+        }
+
+        function turnstileExpired() {
+            document.getElementById('submit-button').disabled = true;
+            document.getElementById('result').textContent = 'Security check expired. Please complete it again.';
         }
     </script>
-</body>
 </body>
 
 </html>
