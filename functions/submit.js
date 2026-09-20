@@ -34,6 +34,7 @@ export async function onRequestPost({ request, env }) {
 			body: JSON.stringify({
 				from: 'onboarding@resend.dev',
 				to: ['isabelcpenam@gmail.com'],
+                reply_to: email,
 				subject: `Portfolio contact from ${name}`,
 				reply_to: email,
 				text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
