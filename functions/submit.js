@@ -5,6 +5,36 @@ export async function onRequestPost({ request, env }) {
 		const email = formData.get('email')?.toString().trim();
 		const message = formData.get('message')?.toString().trim();
 
+		// --- 1. HONEYPOT CHECK ---
+		const honeypot = formData.get('website');
+		if (honeypot) {
+			// If a bot filled out the hidden field, pretend it worked and stop.
+			return Response.json({ success: true, message: 'Your message was sent successfully.' });
+		}
+
+		// --- 2. TURNSTILE VERIFICATION ---
+		const turnstileToken = formData.get('cf-turnstile-response');
+		const turnstileSecretKey = env.TURNSTILE_SECRET_KEY;
+
+		if (!turnstileToken) {
+			return Response.json({ error: 'Security check missing.' }, { status: 400 });
+		}
+
+		const turnstileResponse = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+			method: 'POST',
+			body: new URLSearchParams({
+				secret: turnstileSecretKey,
+				response: turnstileToken,
+			}),
+		});
+
+		const turnstileData = await turnstileResponse.json();
+
+		if (!turnstileData.success) {
+			return Response.json({ error: 'Security check failed. Please try again.' }, { status: 403 });
+		}
+		// --- END SECURITY CHECKS ---
+
 		if (!name || !email || !message) {
 			return Response.json(
 				{
@@ -34,9 +64,8 @@ export async function onRequestPost({ request, env }) {
 			body: JSON.stringify({
 				from: 'onboarding@resend.dev',
 				to: ['isabelcpenam@gmail.com'],
-                reply_to: email,
+				reply_to: email, // Only needs to be here once!
 				subject: `Portfolio contact from ${name}`,
-				reply_to: email,
 				text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
 			}),
 		});
