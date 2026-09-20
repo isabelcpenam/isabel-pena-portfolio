@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ===== Meta ===== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Favicon ===== -->
+    <link rel="icon" type="image/x-icon" href="./assets/imgs/favicon.svg">
+
+    <!-- ===== Title ===== -->
+    <title>Isabel Pena - Graphic Designer</title>
+
+    <!-- ===== LineAwesome ===== -->
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+
+    <!-- ===== Fonts ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,100;1,9..40,200&display=swap" rel="stylesheet">
+
+    <!-- ===== Stylesheet ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/swiper.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+<body>
+
+    <main class="home-page" id="top">
+
+        <!-- Sticky Sidebar
+        ======================================= -->
+        <div class="sticky-sidebar">
+            <div class="sticky-sidebar-inner">
+                <div class="sidebar-top">
+                    <div class="sidebar-logo">
+                        <div class="left">
+                            <a href="./index.html" class="logo-img">
+                                <img src="./assets/imgs/logo.svg" alt="Logo">
+                            </a>
+                            <a href="./index.html" class="logo-text">ISABEL PENA</a>
+                        </div>
+                        <div class="right">
+                            <span id="current-time"></span>
+                            <i class="las la-ellipsis-v"></i>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-me">
+                        <div class="sidebar-me-inner">
+                            <div class="img-box">
+                                <img src="./assets/imgs/me.png" alt="Me">
+                            </div>
+                            <div class="content">
+                                <h3>Isabel Pena</h3>
+                                <p>Graphic Designer</p>
+                                <span class="location"><i class="ph-duotone ph-map-pin"></i> Venezuela</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-menu">
+                        <nav class="menu-lists">
+                            <ul>
+                                <li class="active-menu">
+                                    <a href="./index.html"><span class="icon"><i class="ph-duotone ph-house"></i></span> <span class="title">Home</span></a>
+                                </li>
+                                <li>
+                                    <a href="./projects.html"><span class="icon"><i class="ph-duotone ph-squares-four"></i></span> <span class="title">Portfolio</span></a>
+                                </li>
+                                <li>
+                                    <a href="./about.html"><span class="icon"><i class="ph-duotone ph-fingerprint"></i></span> <span class="title">About</span></a>
+                                </li>
+                                <li>
+                                    <a href="./gallery.html"><span class="icon"><i class="ph-duotone ph-camera"></i></span> <span class="title">Gallery</span></a>
+                                </li>
+                                <li>
+                                    <a href="./contact.html"><span class="icon"><i class="ph-duotone ph-paperclip"></i></span> <span class="title">Contact</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="responsive-mode sidebar-bottom">
+                            <div class="social-link-wrap">
+                                <ul class="social-links">
+                                    <li><a href="https://www.behance.net/isabelcpena" target="_blank" rel="noopener noreferrer"><i class="lab la-behance"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/isobelukis/" target="_blank" rel="noopener noreferrer"><i class="lab la-linkedin"></i></a></li>
+                                    <li><a href="https://www.artstation.com/is0belukis" target="_blank" rel="noopener noreferrer"><i class="lab la-artstation"></i></a></li>
+                                </ul>
+                            </div>
+                            <p class="copyright-text">
+                                &copy; 2026
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="humberg-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="sidebar-bottom">
+                    <div class="social-link-wrap">
+                        <ul class="social-links">
+                            <li><a href="https://www.behance.net/isabelcpena" target="_blank" rel="noopener noreferrer"><i class="lab la-behance"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/isobelukis/" target="_blank" rel="noopener noreferrer"><i class="lab la-linkedin"></i></a></li>
+                            <li><a href="https://www.artstation.com/is0belukis" target="_blank" rel="noopener noreferrer"><i class="lab la-artstation"></i></a></li>
+                        </ul>
+                    </div>
+                    <p class="copyright-text">
+                        &copy; 2026
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- End Sticky Sidebar -->
+
+
+        <div class="page-content-wrapper">
+
+            <!-- Header
+            ======================================= -->
+            <section class="hero-area">
+                <div class="custom-container">
+                    <div class="custom-row">
+                        <div class="hero-img">
+                            <img src="./assets/imgs/hero.jpg" alt="Hero">
+                        </div>
+
+                        <div class="hero-content-right">
+                            <div class="hero-content-top">
+                                <div class="available-link-wrap">
+                                    <a href="#" class="available-link common-box">
+                                        <span class="online-dot"></span>Available for freelance work
+                                    </a>
+                                </div>
+                                <span class="time common-box">
+                                    <i class="ph ph-clock"></i> <span id="datetime"></span>
+                                </span>
+
+                                <a href="contact.html" class="theme-btn common-box">
+                                    <span>
+                                        <span class="normal">Contact Me <i class="las la-arrow-right"></i></span>
+                                        <span class="hover">Contact Me <i class="las la-arrow-right"></i></span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="hero-content-bottom">
+                                <div class="hero-content common-box">
+                                    <span>A GRAPHIC DESIGNER</span>
+                                    <h1>Isabel Pena 👋🏽</h1>
+                                    <p>I am a San francisco-based product designer with a focus on web design, illustration, a visual development. I have a diverse range of experience and industries.</p>
+                                    <img src="./assets/imgs/signeture.svg" alt="Signature" class="signature">
+                                </div>
+
+                                <div class="hero-map-wrap">
+                                    <div class="hero-map-top">
+                                        <span class="address common-box">VENEZUELA</span>
+                                        <span class="address common-box address-country"><i class="ph-duotone ph-map-pin map-icon"></i> VZLA</span>
+                                    </div>
+                                    <div id="hero-map">
+                                        <canvas id="cobe" width="600" height="600"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Header -->
+
+
+            <!-- Project
+            ======================================= -->
+            <section class="project-area">
+                <div class="custom-container">
+                    <div class="project-header section-header">
+                        <a href="./projects.html" class="theme-btn common-box">
+                            <span>
+                                <span class="normal">Portfolio <i class="las la-arrow-right"></i></span>
+                                <span class="hover">Portfolio <i class="las la-arrow-right"></i></span>
+                            </span>
+                        </a>
+                        <div class="animation-texts-wrap">
+                            <div class="animation-text-inner">
+                                <ul>
+                                    <li>⌘ It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                    <li>It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                    <li>It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="project-slider-action-btn">
+                            <div class="project-button-prev"><i class="las la-angle-left"></i></div>
+                            <div class="project-button-next"><i class="las la-angle-right"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="project-slider-wrapper">
+                        <div class="swiper project-slider">
+                            <div class="swiper-wrapper">
+        
+                                <div class="swiper-slide">
+                                    <div class="project-slide-col-2">
+                                        <div class="project-slider-box">
+                                            <a href="project-detail.html" class="overlay-link"></a>
+                                            <div class="project-img">
+                                                <img src="./assets/imgs/project-1.png" alt="Project">
+                                                <span class="badge-year">
+                                                    <span class="badge-inner">
+                                                        <span>2024</span>
+                                                        <span>2024</span>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="project-content">
+                                                <h3>Retro Remix</h3>
+                                                <p>Ux Design</p>
+                                                <a href="project-detail.html" class="theme-btn common-box">
+                                                    <span>
+                                                        <span class="normal"><i class="las la-angle-right"></i></span>
+                                                        <span class="hover"><img src="./assets/imgs/right-arrow.svg" alt="icon"></span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="project-slider-box">
+                                            <a href="project-detail.html" class="overlay-link"></a>
+                                            <div class="project-img">
+                                                <img src="./assets/imgs/project-4.png" alt="Project">
+                                                <span class="badge-year">
+                                                    <span class="badge-inner">
+                                                        <span>2024</span>
+                                                        <span>2024</span>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="project-content">
+                                                <h3>Light Play</h3>
+                                                <p>SEO</p>
+                                                <a href="project-detail.html" class="theme-btn common-box">
+                                                    <span>
+                                                        <span class="normal"><i class="las la-angle-right"></i></span>
+                                                        <span class="hover"><img src="./assets/imgs/right-arrow.svg" alt="icon"></span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="swiper-slide">
+                                    <div class="project-slide-col-2">
+                                        <div class="project-slider-box">
+                                            <a href="project-detail.html" class="overlay-link"></a>
+                                            <div class="project-img">
+                                                <img src="./assets/imgs/project-2.png" alt="Project">
+                                                <span class="badge-year">
+                                                    <span class="badge-inner">
+                                                        <span>2024</span>
+                                                        <span>2024</span>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="project-content">
+                                                <h3>Mystical Meodows</h3>
+                                                <p>Web Development</p>
+                                                <a href="project-detail.html" class="theme-btn common-box">
+                                                    <span>
+                                                        <span class="normal"><i class="las la-angle-right"></i></span>
+                                                        <span class="hover"><img src="./assets/imgs/right-arrow.svg" alt="icon"></span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="project-slider-box">
+                                            <a href="project-detail.html" class="overlay-link"></a>
+                                            <div class="project-img">
+                                                <img src="./assets/imgs/project-5.png" alt="Project">
+                                                <span class="badge-year">
+                                                    <span class="badge-inner">
+                                                        <span>2024</span>
+                                                        <span>2024</span>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="project-content">
+                                                <h3>Synthwave Sympony</h3>
+                                                <p>Social Media</p>
+                                                <a href="project-detail.html" class="theme-btn common-box">
+                                                    <span>
+                                                        <span class="normal"><i class="las la-angle-right"></i></span>
+                                                        <span class="hover"><img src="./assets/imgs/right-arrow.svg" alt="icon"></span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="swiper-slide">
+                                    <div class="project-slide-col-2">
+                                        <div class="project-slider-box">
+                                            <a href="project-detail.html" class="overlay-link"></a>
+                                            <div class="project-img">
+                                                <img src="./assets/imgs/project-3.png" alt="Project">
+                                                <span class="badge-year">
+                                                    <span class="badge-inner">
+                                                        <span>2024</span>
+                                                        <span>2024</span>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="project-content">
+                                                <h3>Cybernetic Dreams</h3>
+                                                <p>Brand Marketing</p>
+                                                <a href="project-detail.html" class="theme-btn common-box">
+                                                    <span>
+                                                        <span class="normal"><i class="las la-angle-right"></i></span>
+                                                        <span class="hover"><img src="./assets/imgs/right-arrow.svg" alt="icon"></span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="project-slider-box">
+                                            <a href="project-detail.html" class="overlay-link"></a>
+                                            <div class="project-img">
+                                                <img src="./assets/imgs/project-6.png" alt="Project">
+                                                <span class="badge-year">
+                                                    <span class="badge-inner">
+                                                        <span>2024</span>
+                                                        <span>2024</span>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="project-content">
+                                                <h3>Mindscapes</h3>
+                                                <p>Robotic Automation</p>
+                                                <a href="project-detail.html" class="theme-btn common-box">
+                                                    <span>
+                                                        <span class="normal"><i class="las la-angle-right"></i></span>
+                                                        <span class="hover"><img src="./assets/imgs/right-arrow.svg" alt="icon"></span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="swiper-slide">
+                                    <div class="project-slide-col-2">
+                                        <div class="project-slider-box">
+                                            <a href="project-detail.html" class="overlay-link"></a>
+                                            <div class="project-img">
+                                                <img src="./assets/imgs/project-1.png" alt="Project">
+                                                <span class="badge-year">
+                                                    <span class="badge-inner">
+                                                        <span>2024</span>
+                                                        <span>2024</span>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="project-content">
+                                                <h3>Retro Remix</h3>
+                                                <p>Ux Design</p>
+                                                <a href="project-detail.html" class="theme-btn common-box">
+                                                    <span>
+                                                        <span class="normal"><i class="las la-angle-right"></i></span>
+                                                        <span class="hover"><img src="./assets/imgs/right-arrow.svg" alt="icon"></span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="project-slider-box">
+                                            <a href="project-detail.html" class="overlay-link"></a>
+                                            <div class="project-img">
+                                                <img src="./assets/imgs/project-4.png" alt="Project">
+                                                <span class="badge-year">
+                                                    <span class="badge-inner">
+                                                        <span>2024</span>
+                                                        <span>2024</span>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="project-content">
+                                                <h3>Light Play</h3>
+                                                <p>SEO</p>
+                                                <a href="project-detail.html" class="theme-btn common-box">
+                                                    <span>
+                                                        <span class="normal"><i class="las la-angle-right"></i></span>
+                                                        <span class="hover"><img src="./assets/imgs/right-arrow.svg" alt="icon"></span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Project -->
+
+
+            <!-- Partner
+            ======================================= -->
+            <section class="partner-area">
+                <div class="custom-container">
+                    <div class="partner-header section-header">
+                        <h4 class="common-box subtitle">
+                            Partners
+                        </h4>
+                        <div class="animation-texts-wrap">
+                            <div class="animation-text-inner">
+                                <ul>
+                                    <li>⌘ It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                    <li>It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                    <li>It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="partner-slider-wrap">
+                        <div class="partner-slider-inner">
+                            <ul>
+                                <li class="common-box"><img src="./assets/imgs/client-1.png" alt="Client"></li>
+                                <li class="common-box"><img src="./assets/imgs/client-2.png" alt="Client"></li>
+                                <li class="common-box"><img src="./assets/imgs/client-3.png" alt="Client"></li>
+                                <li class="common-box"><img src="./assets/imgs/client-4.png" alt="Client"></li>
+                                <li class="common-box"><img src="./assets/imgs/client-5.png" alt="Client"></li>
+                                <li class="common-box"><img src="./assets/imgs/client-6.png" alt="Client"></li>
+                                <li class="common-box"><img src="./assets/imgs/client-1.png" alt="Client"></li>
+                                <li class="common-box"><img src="./assets/imgs/client-2.png" alt="Client"></li>
+                                <li class="common-box"><img src="./assets/imgs/client-3.png" alt="Client"></li>
+                                <li class="common-box"><img src="./assets/imgs/client-4.png" alt="Client"></li>
+                                <li class="common-box"><img src="./assets/imgs/client-5.png" alt="Client"></li>
+                                <li class="common-box"><img src="./assets/imgs/client-6.png" alt="Client"></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-experience-wrap">
+                        <div class="project-experience">
+                            <h2>6+</h2>
+                            <p>Years of experience</p>
+                        </div>
+                        <div class="project-experience">
+                            <h2>100+</h2>
+                            <p>Completed Projects</p>
+                        </div>
+                        <div class="project-experience">
+                            <h2>$16M</h2>
+                            <p>Partners Raised</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Partner -->
+
+
+            <!-- Education & Experience
+            ======================================= -->
+            <section class="edc-and-exp-area">
+                <div class="custom-container">
+                    <div class="edc-and-exp-inner">
+                        <div class="edc-and-exp-inner-box edc-wrap">
+                            <h4 class="subtitle common-box">Education</h4>
+                            <div class="edc-and-exp-lists">
+                                <div class="edc-and-exp-box">
+                                    <div class="img-box"><img src="./assets/imgs/edc-1.jpg" alt="Education"></div>
+                                    <div class="content"><span class="date">Jan 2021 - Dec 2024</span><h3><a href="#">Bachelor's Degree in Graphic Design</a></h3><p>Universidad Rafael Belloso Chacín</p></div>
+                                </div>
+                                <div class="edc-and-exp-box">
+                                    <div class="img-box"><img src="./assets/imgs/edc-2.jpg" alt="Education"></div>
+                                    <div class="content"><span class="date">Oct 2026 - Oct 2027</span><h3><a href="#">Master's Degree in Video Game Design</a></h3><p>Universidad Europea</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edc-and-exp-inner-box exp-wrap">
+                            <h4 class="subtitle common-box">Experience</h4>
+                            <div class="edc-and-exp-lists">
+                                <div class="edc-and-exp-box"><div class="img-box"><img src="./assets/imgs/exp-1.png" alt="Head of Graphic Design"></div><div class="content"><span class="date">Mar 2025 - Present</span><h3><a href="#">Head of Graphic Design</a></h3><p>Yacht Kings</p></div></div>
+                                <div class="edc-and-exp-box"><div class="img-box"><img src="./assets/imgs/exp-2.png" alt="Graphic Designer"></div><div class="content"><span class="date">Dec 2022 - Aug 2025</span><h3><a href="#">Graphic Designer</a></h3><p>ITML Institute</p></div></div>
+                                <div class="edc-and-exp-box"><div class="img-box"><img src="./assets/imgs/exp-3.png" alt="Video Editor"></div><div class="content"><span class="date">Aug 2024 - Oct 2024</span><h3><a href="#">Video Editor</a></h3><p>Bgcreativos</p></div></div>
+                                <div class="edc-and-exp-box"><div class="img-box"><img src="./assets/imgs/exp-4.png" alt="Graphic Designer"></div><div class="content"><span class="date">Apr 2023 - Jan 2024</span><h3><a href="#">Graphic Designer</a></h3><p>JoseSanDance</p></div></div>
+                                <div class="edc-and-exp-box"><div class="img-box"><img src="./assets/imgs/exp-5.png" alt="Graphic Designer"></div><div class="content"><span class="date">Feb 2022 - Aug 2022</span><h3><a href="#">Graphic Designer</a></h3><p>Barrett Holistic Services</p></div></div>
+                                <div class="edc-and-exp-box"><div class="img-box"><img src="./assets/imgs/exp-6.png" alt="Graphic Designer"></div><div class="content"><span class="date">May 2020 - Sep 2021</span><h3><a href="#">Graphic Designer</a></h3><p>Farmacia Royal</p></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Education & Experience -->
+
+
+            <!-- Service
+            ======================================= -->
+            <section class="service-area">
+                <div class="custom-container">
+
+                    <div class="service-header section-header">
+                        <h4 class="common-box subtitle">
+                            Services
+                        </h4>
+                        <div class="animation-texts-wrap">
+                            <div class="animation-text-inner">
+                                <ul>
+                                    <li>⌘ It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                    <li>It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                    <li>It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-lists">
+                        <div class="service-box">
+                            <a href="./contact.html" class="overlay-link"></a>
+                            <h3><a href="./contact.html">Website Design</a></h3>
+                            <p>I created digital products with unique ideas use Figma </p>
+                            <span>24 PROJECTS</span>
+                            <div class="icon">
+                                <i class="ph ph-paint-brush"></i>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <a href="./contact.html" class="overlay-link"></a>
+                            <h3><a href="./contact.html">Development</a></h3>
+                            <p>I build website go live with Framer, Webflow </p>
+                            <span>126 PROJECTS</span>
+                            <div class="icon">
+                                <i class="ph ph-code"></i>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <a href="./contact.html" class="overlay-link"></a>
+                            <h3><a href="./contact.html">SEO/Marketing</a></h3>
+                            <p>I build website go live with Framer, Webflow </p>
+                            <span>126 PROJECTS</span>
+                            <div class="icon">
+                                <i class="ph ph-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <a href="./contact.html" class="overlay-link"></a>
+                            <h3><a href="./contact.html">Branding</a></h3>
+                            <p>The best privacy policy online network.</p>
+                            <span>88 PROJECTS</span>
+                            <div class="icon">
+                                <i class="ph ph-intersect-three"></i>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <a href="./contact.html" class="overlay-link"></a>
+                            <h3><a href="./contact.html">Cloud Services</a></h3>
+                            <p>The best privacy policy online network.</p>
+                            <span>56 PROJECTS</span>
+                            <div class="icon">
+                                <i class="ph ph-cloud-check"></i>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <a href="./contact.html" class="overlay-link"></a>
+                            <h3><a href="./contact.html">Network Security</a></h3>
+                            <p>The best privacy policy online network.</p>
+                            <span>13 PROJECTS</span>
+                            <div class="icon">
+                                <i class="ph ph-lock"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- End Service -->
+
+            
+            <!-- Stack
+            ======================================= -->
+            <section class="stack-area">
+                <div class="custom-container">
+                    <div class="stack-header section-header">
+                        <h4 class="common-box subtitle">
+                            Stack
+                        </h4>
+                        <div class="animation-texts-wrap">
+                            <div class="animation-text-inner">
+                                <ul>
+                                    <li>⌘ It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                    <li>It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                    <li>It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stack-lists">
+                        <div class="edc-and-exp-box stack-box">
+                            <div class="img-box">
+                                <img src="./assets/imgs/stack-1.png" alt="Stack">
+                            </div>
+                            <div class="content">
+                                <h3><a href="#">Framer</a></h3>
+                                <p>Start you dream sith with AI. Zero code, Maximum Speed.</p>
+                            </div>
+                        </div>
+                        <div class="edc-and-exp-box stack-box">
+                            <div class="img-box">
+                                <img src="./assets/imgs/stack-2.png" alt="Stack">
+                            </div>
+                            <div class="content">
+                                <h3><a href="#">Hyper</a></h3>
+                                <p>Hyper is an electron based terminal Application.</p>
+                            </div>
+                        </div>
+                        <div class="edc-and-exp-box stack-box">
+                            <div class="img-box">
+                                <img src="./assets/imgs/stack-3.png" alt="Stack">
+                            </div>
+                            <div class="content">
+                                <h3><a href="#">Brave Browser</a></h3>
+                                <p>The best privacy policy online network.</p>
+                            </div>
+                        </div>
+                        <div class="edc-and-exp-box stack-box">
+                            <div class="img-box">
+                                <img src="./assets/imgs/stack-4.png" alt="Stack">
+                            </div>
+                            <div class="content">
+                                <h3><a href="#">IA Writer</a></h3>
+                                <p>Pure writing pleasure with in your hands.</p>
+                            </div>
+                        </div>
+                        <div class="edc-and-exp-box stack-box">
+                            <div class="img-box">
+                                <img src="./assets/imgs/stack-5.png" alt="Stack">
+                            </div>
+                            <div class="content">
+                                <h3><a href="#">Superhuman</a></h3>
+                                <p>The fastest Email Experience ever made.</p>
+                            </div>
+                        </div>
+                        <div class="edc-and-exp-box stack-box">
+                            <div class="img-box">
+                                <img src="./assets/imgs/stack-6.png" alt="Stack">
+                            </div>
+                            <div class="content">
+                                <h3><a href="#">Typefully</a></h3>
+                                <p>Write better tweets. Grow your audience.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- End Stack -->
+
+            
+            <!-- Testimonial
+            ======================================= -->
+            <section class="testimonial-area">
+                <div class="custom-container">
+                    <div class="testimonial-header section-header">
+                        <h4 class="subtitle common-box">Testimonial</h4>
+
+                        <div class="testimonial-slider-action-btn">
+                            <div class="testimonial-button-prev"><i class="las la-angle-left"></i></div>
+                            <div class="testimonial-button-next"><i class="las la-angle-right"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slider-wrapper">
+                        <div class="swiper testimonial-slider">
+                            <div class="swiper-wrapper">
+        
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box">
+                                        <div class="img-box">
+                                            <img src="./assets/imgs/testimonial-1.png" alt="Testimonial">
+                                        </div>
+                                        <div class="content">
+                                            <div class="content-top">
+                                                <h3>Larry Daley</h3>
+                                                <span>Product Designer</span>
+                                                <div class="icon">
+                                                    <img src="./assets/imgs/testimonial-icon-1.svg" alt="shape">
+                                                </div>
+                                            </div>
+                                            <div class="content-bottom">
+                                                <img src="./assets/imgs/testimonial-shape.svg" alt="shape" class="line-shape">
+                                                <p>I am a San francisco-based product designer with a focus on web design, illustration, a visual development. I have a diverse range of experience and industries.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box">
+                                        <div class="img-box">
+                                            <img src="./assets/imgs/testimonial-2.png" alt="Testimonial">
+                                        </div>
+                                        <div class="content">
+                                            <div class="content-top">
+                                                <h3>Manny William</h3>
+                                                <span>Full Stack Developer</span>
+                                                <div class="icon">
+                                                    <img src="./assets/imgs/testimonial-icon-2.svg" alt="shape">
+                                                </div>
+                                            </div>
+                                            <div class="content-bottom">
+                                                <img src="./assets/imgs/testimonial-shape.svg" alt="shape" class="line-shape">
+                                                <p>I am a San francisco-based product designer with a focus on web design, illustration, a visual development. I have a diverse range of experience and industries.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box">
+                                        <div class="img-box">
+                                            <img src="./assets/imgs/testimonial-1.png" alt="Testimonial">
+                                        </div>
+                                        <div class="content">
+                                            <div class="content-top">
+                                                <h3>Larry Daley</h3>
+                                                <span>Product Designer</span>
+                                                <div class="icon">
+                                                    <img src="./assets/imgs/testimonial-icon-1.svg" alt="shape">
+                                                </div>
+                                            </div>
+                                            <div class="content-bottom">
+                                                <img src="./assets/imgs/testimonial-shape.svg" alt="shape" class="line-shape">
+                                                <p>I am a San francisco-based product designer with a focus on web design, illustration, a visual development. I have a diverse range of experience and industries.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box">
+                                        <div class="img-box">
+                                            <img src="./assets/imgs/testimonial-2.png" alt="Testimonial">
+                                        </div>
+                                        <div class="content">
+                                            <div class="content-top">
+                                                <h3>Manny William</h3>
+                                                <span>Full Stack Developer</span>
+                                                <div class="icon">
+                                                    <img src="./assets/imgs/testimonial-icon-2.svg" alt="shape">
+                                                </div>
+                                            </div>
+                                            <div class="content-bottom">
+                                                <img src="./assets/imgs/testimonial-shape.svg" alt="shape" class="line-shape">
+                                                <p>I am a San francisco-based product designer with a focus on web design, illustration, a visual development. I have a diverse range of experience and industries.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- End Testimonial -->
+
+            
+            <!-- Gallery
+            ======================================= -->
+            <section class="gallery-area">
+                <div class="custom-container">
+                    <div class="gallery-header section-header">
+                        <h4 class="subtitle common-box">Gallery</h4>
+
+                        <div class="animation-texts-wrap">
+                            <div class="animation-text-inner">
+                                <ul>
+                                    <li>⌘ It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                    <li>It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                    <li>It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="gallery-slider-wrapper">
+                        <div class="gallery-lists-anim">
+                            <div class="gallery-box">
+                                <img src="./assets/imgs/gallery-1.jpg" alt="Gallery">
+                            </div>
+                            <div class="gallery-box">
+                                <img src="./assets/imgs/gallery-2.jpg" alt="Gallery">
+                            </div>
+                            <div class="gallery-box">
+                                <img src="./assets/imgs/gallery-3.jpg" alt="Gallery">
+                            </div>
+                            <div class="gallery-box">
+                                <img src="./assets/imgs/gallery-4.jpg" alt="Gallery">
+                            </div>
+                            <div class="gallery-box">
+                                <img src="./assets/imgs/gallery-1.jpg" alt="Gallery">
+                            </div>
+                            <div class="gallery-box">
+                                <img src="./assets/imgs/gallery-2.jpg" alt="Gallery">
+                            </div>
+                            <div class="gallery-box">
+                                <img src="./assets/imgs/gallery-3.jpg" alt="Gallery">
+                            </div>
+                            <div class="gallery-box">
+                                <img src="./assets/imgs/gallery-4.jpg" alt="Gallery">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- End Gallery -->
+
+
+            <!-- Contact
+            ======================================= -->
+            <section class="contact-area">
+                <div class="custom-container">
+                    <div class="contact-header section-header">
+                        <h4 class="subtitle common-box">Contact</h4>
+
+                        <div class="animation-texts-wrap">
+                            <div class="animation-text-inner">
+                                <ul>
+                                    <li>⌘ It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                    <li>It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                    <li>It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-inner">
+                        <div class="contact-form">
+                            <form id="ajax-form" action="assets/mail/contact.php" method="POST">
+                                <input type="hidden" name="access_key" value="0ea6f02e-35e1-4bc8-801a-f700e7c5a95c">
+                                <input type="hidden" name="subject">
+
+                                <input type="text" name="name" placeholder="Name">
+                                <input type="email" placeholder="Email" name="email">
+                                <textarea name="message" id="message" placeholder="Message"></textarea>
+                                <button type="submit">Submit</button>
+                                <p class="text-base text-gray-400" style="margin-top: 12px;" id="result"></p>
+                            </form>
+                        </div>
+
+                        <div class="contact-infos">
+                            <h4 class="subtitle common-box">
+                                Address
+                            </h4>
+                            <ul>
+                                <li>
+                                    <div class="icon">
+                                        <i class="lar la-map"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h3>Based In </h3>
+                                        <p>Venezuela </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                         <i class="las la-headphones"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h3>Contact Info</h3>
+                                        <p>
+                                            <a href="tel:+17866746577">+1-786-674-6577</a>
+                                        </p>
+                                        <p><a href="mailto:isabelcpenam@gmail.com">isabelcpenam@gmail.com</a></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- End Contact -->
+
+
+
+            <!-- Footer
+            ======================================= -->
+            <footer class="footer-area">
+                <div class="left">
+                    <p>© 2026 Isabel Pena. All rights reserved.</p>
+                </div>
+                <a href="#top" class="backto-top">Scroll to top <i class="las la-arrow-up"></i></a>
+            </footer>
+            <!-- End Footer -->
+
+        </div>
+
+    </main>
+
+
+
+    <!-- Jquery
+    ======================================= -->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
+    <script src="./assets/js/jquery-3.7.1.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/swiper.min.js"></script>
+    <script src="./assets/js/moment.min.js"></script>
+    <script src="./assets/js/ajaxform.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+    <script type="module">
+        import createGlobe from 'https://cdn.skypack.dev/cobe'
+
+        let phi = 0
+        let canvas = document.getElementById("cobe")
+
+        let background = "#000000";
+        let baseColor = "#9b3f2f";
+        let glowColor = "#5a1715";
+        let markerColor = "#c45c35";
+
+        function convertRGB(color) {
+            // Remove '#' from the beginning of the color string if present
+            color = color.replace(/^#/, '');
+
+            // Parse the color string into RGB components
+            let r = parseInt(color.substring(0, 2), 16) / 255;
+            let g = parseInt(color.substring(2, 4), 16) / 255;
+            let b = parseInt(color.substring(4, 6), 16) / 255;
+
+            return { r, g, b };
+        }
+
+
+        let baseConvert = convertRGB(baseColor);
+        let glowConvert = convertRGB(glowColor);
+        let markerConvert = convertRGB(markerColor);
+
+        const globe = createGlobe(canvas, {
+            devicePixelRatio: 1,
+            width: 600,
+            height: 600,
+            phi: 0,
+            speed: 1,
+            theta: .3,
+            dark: 0,
+            diffuse: 2,
+            mapSamples: 20000,
+            mapBrightness: 10,
+            markerColor: [markerConvert.r, markerConvert.g, markerConvert.b],
+            baseColor: [baseConvert.r, baseConvert.g, baseConvert.b],
+            glowColor: [glowConvert.r, glowConvert.g, glowConvert.b],
+            markerSize: .1,
+            markers: [
+            { location: [37.7595, -122.4367], size: 0.03 },
+            { location: [40.7128, -74.006], size: 0.1 },
+            ],
+            onRender: (state) => {
+                state.phi = phi
+                phi += 0.01
+            },
+        })
+    </script>
+</body>
+</html>

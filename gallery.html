@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ===== Meta ===== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Favicon ===== -->
+    <link rel="icon" type="image/x-icon" href="./assets/imgs/favicon.svg">
+
+    <!-- ===== Title ===== -->
+    <title>Isabel Pena - Gallery</title>
+
+    <!-- ===== LineAwesome ===== -->
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+
+    <!-- ===== Fonts ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,100;1,9..40,200&display=swap"
+        rel="stylesheet">
+
+    <!-- ===== Stylesheet ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/swiper.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+
+<body>
+
+    <main class="gallery-page" id="top">
+
+        <!-- Sticky Sidebar
+        ======================================= -->
+        <div class="sticky-sidebar">
+            <div class="sticky-sidebar-inner">
+                <div class="sidebar-top">
+                    <div class="sidebar-logo">
+                        <div class="left">
+                            <a href="./index.html" class="logo-img">
+                                <img src="./assets/imgs/logo.svg" alt="Logo">
+                            </a>
+                            <a href="./index.html" class="logo-text">ISABEL PENA</a>
+                        </div>
+                        <div class="right">
+                            <span id="current-time"></span>
+                            <i class="las la-ellipsis-v"></i>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-me">
+                        <div class="sidebar-me-inner">
+                            <div class="img-box">
+                                <img src="./assets/imgs/me.png" alt="Me">
+                            </div>
+                            <div class="content">
+                                <h3>Isabel Pena</h3>
+                                <p>Graphic Designer</p>
+                                <span class="location"><i class="ph-duotone ph-map-pin"></i> Venezuela</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-menu">
+                        <nav class="menu-lists">
+                            <ul>
+                                <li>
+                                    <a href="./index.html"><span class="icon"><i class="ph-duotone ph-house"></i></span> <span class="title">Home</span></a>
+                                </li>
+                                <li>
+                                    <a href="./projects.html"><span class="icon"><i class="ph-duotone ph-squares-four"></i></span> <span class="title">Portfolio</span></a>
+                                </li>
+                                <li>
+                                    <a href="./about.html"><span class="icon"><i class="ph-duotone ph-fingerprint"></i></span> <span class="title">About</span></a>
+                                </li>
+                                <li class="active-menu">
+                                    <a href="./gallery.html"><span class="icon"><i class="ph-duotone ph-camera"></i></span> <span class="title">Gallery</span></a>
+                                </li>
+                                <li>
+                                    <a href="./contact.html"><span class="icon"><i class="ph-duotone ph-paperclip"></i></span> <span class="title">Contact</span></a>
+                                </li>
+                                <li>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="responsive-mode sidebar-bottom">
+                            <div class="social-link-wrap">
+                                <ul class="social-links">
+                                    <li><a href="https://www.behance.net/isabelcpena" target="_blank" rel="noopener noreferrer"><i class="lab la-behance"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/isobelukis/" target="_blank" rel="noopener noreferrer"><i class="lab la-linkedin"></i></a></li>
+                                    <li><a href="https://www.artstation.com/is0belukis" target="_blank" rel="noopener noreferrer"><i class="lab la-artstation"></i></a></li>
+                                </ul>
+                            </div>
+                            <p class="copyright-text">
+                                &copy; 2026
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="humberg-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="sidebar-bottom">
+                    <div class="social-link-wrap">
+                        <ul class="social-links">
+                            <li><a href="https://www.behance.net/isabelcpena" target="_blank" rel="noopener noreferrer"><i class="lab la-behance"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/isobelukis/" target="_blank" rel="noopener noreferrer"><i class="lab la-linkedin"></i></a></li>
+                            <li><a href="https://www.artstation.com/is0belukis" target="_blank" rel="noopener noreferrer"><i class="lab la-artstation"></i></a></li>
+                        </ul>
+                    </div>
+                    <p class="copyright-text">
+                        &copy; 2026
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- End Sticky Sidebar -->
+
+
+        <div class="page-content-wrapper">
+
+            <!-- Gallery
+            ======================================= -->
+            <section class="gallery2-area">
+                <div class="custom-container">
+                    <div class="gallery-header section-header">
+                        <h4 class="subtitle common-box">Gallery</h4>
+
+                        <div class="animation-texts-wrap">
+                            <div class="animation-text-inner">
+                                <ul>
+                                    <li>⌘ It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                    <li>It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                    <li>It is a long established fact that a reader will distracted by the readable content of a page when looking an its readable ⌘</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-lists">
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-1.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-1.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-2.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-2.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-3.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-3.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-4.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-4.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-5.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-5.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-6.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-6.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-7.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-7.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-8.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-8.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-9.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-9.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-10.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-10.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-11.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-11.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-12.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-12.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-13.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-13.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-14.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-14.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-15.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-15.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-16.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-16.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-17.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-17.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-18.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-18.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-19.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-19.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-20.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-20.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-21.png" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-21.png" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-22.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-22.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-23.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-23.jpg" alt="Gallery">
+                        </div>
+                        <div class="gallery-box gallery2-box">
+                            <img src="./assets/imgs/gallery-24.jpg" alt="Gallery">
+                            <img class="hover-img" src="./assets/imgs/gallery-24.jpg" alt="Gallery">
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- End Gallery -->
+
+
+
+            <!-- Footer
+            ======================================= -->
+            <footer class="footer-area">
+                <div class="left">
+                    <p>© 2026 Isabel Pena. All rights reserved.</p>
+                </div>
+                <a href="#top" class="backto-top">Scroll to top <i class="las la-arrow-up"></i></a>
+            </footer>
+            <!-- End Footer -->
+
+        </div>
+
+    </main>
+
+
+    <!-- JQuery
+    ======================================= -->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
+    <script src="./assets/js/jquery-3.7.1.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/swiper.min.js"></script>
+    <script src="./assets/js/moment.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
