@@ -2240,7 +2240,7 @@ main {
     color: #F9F9F9;
     font-weight: 400;
 }
-.contact-infos ul li:last-child .content p:last-child {
+.contact-infos ul li .content p + p {
     margin-top: 10px;
 }
 .contact-infos ul li .content p {
@@ -2256,6 +2256,12 @@ main {
 }
 .contact-infos ul li .content p a:hover {
     color: var(--primary);
+}
+.contact-infos ul li .content .contact-method-icon {
+    display: inline-block;
+    width: 22px;
+    font-size: 18px;
+    text-align: center;
 }
 .contact-infos ul li .content .shape {
     position: absolute;
