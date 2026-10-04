@@ -94,6 +94,41 @@ if ($('#current-time').length) {
   
   document.querySelector('#current-time').textContent = currentTime;
 }
+
+function getProjectLabel(projectNumber) {
+  var lastTwoDigits = projectNumber % 100;
+  var suffix = lastTwoDigits >= 11 && lastTwoDigits <= 13
+    ? 'th'
+    : ({ 1: 'st', 2: 'nd', 3: 'rd' }[projectNumber % 10] || 'th');
+
+  return projectNumber + suffix + ' Project';
+}
+
+document.querySelectorAll('.projects-page .project-slider-box, .project-slider .project-slider-box').forEach(function(card, index) {
+  var projectNumber = index + 1;
+  var projectTitle = card.querySelector('.project-content h3');
+
+  if (projectTitle) {
+    projectTitle.textContent = getProjectLabel(projectNumber);
+  }
+
+  card.querySelectorAll('a[href="project-detail.html"]').forEach(function(link) {
+    link.href = 'project-detail.html?project=' + projectNumber;
+  });
+});
+
+var projectDetailTitle = document.querySelector('#project-detail-title');
+if (projectDetailTitle) {
+  var requestedProject = Number(new URLSearchParams(window.location.search).get('project'));
+  var projectNumber = Number.isInteger(requestedProject) && requestedProject >= 1 && requestedProject <= 15
+    ? requestedProject
+    : 1;
+  var projectLabel = getProjectLabel(projectNumber);
+
+  projectDetailTitle.textContent = projectLabel;
+  document.querySelector('#project-detail-name').textContent = projectLabel;
+}
+
 const humbergMenu = document.querySelector('.humberg-menu');
 const sidebarMenu = document.querySelector('.sticky-sidebar');
 
