@@ -322,7 +322,7 @@
         min-height: 320px;
         aspect-ratio: auto;
     }
-    .project-details-hero-wrap .custom-container:has(.spirit-bound-game-frame) {
+    .project-details-hero-wrap .spirit-bound-game-container {
         padding: 8px;
     }
     .spirit-bound-overview .custom-container {

@@ -1397,10 +1397,18 @@ main {
 .spirit-bound-game-frame {
     display: block;
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
     height: auto;
     aspect-ratio: 1152 / 668;
     border: 0;
     background: #333;
+}
+.spirit-bound-game-title {
+    display: inline-block;
+    max-width: 100%;
+    margin: 0 0 18px;
+    padding: 12px 14px;
 }
 .spirit-bound-credits .team-credit-list {
     display: grid;
