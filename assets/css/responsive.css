@@ -311,3 +311,14 @@
         line-height: 21px;
     }
 }
+
+@media (max-width: 809px) {
+    .project-details-hero-wrap .project-video-container {
+        padding: 0;
+    }
+    .project-details-hero-wrap .project-video-hero {
+        width: 100%;
+        min-width: 0;
+        padding: 0;
+    }
+}
