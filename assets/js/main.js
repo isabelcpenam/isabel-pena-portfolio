@@ -96,6 +96,10 @@ if ($('#current-time').length) {
 }
 
 function getProjectLabel(projectNumber) {
+  if (projectNumber === 1) {
+    return 'Spirit Bound';
+  }
+
   var lastTwoDigits = projectNumber % 100;
   var suffix = lastTwoDigits >= 11 && lastTwoDigits <= 13
     ? 'th'
