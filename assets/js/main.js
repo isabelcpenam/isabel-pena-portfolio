@@ -132,10 +132,9 @@ if (projectDetailTitle) {
   projectDetailTitle.textContent = projectLabel;
   document.querySelector('#project-detail-name').textContent = projectLabel;
 
-  var spiritBoundDiagrams = document.querySelector('.spirit-bound-diagrams');
-  if (spiritBoundDiagrams) {
-    spiritBoundDiagrams.hidden = projectNumber !== 1;
-  }
+  document.querySelectorAll('.spirit-bound-only').forEach(function(section) {
+    section.hidden = projectNumber !== 1;
+  });
 }
 
 const humbergMenu = document.querySelector('.humberg-menu');

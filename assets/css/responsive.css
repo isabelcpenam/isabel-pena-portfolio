@@ -313,6 +313,19 @@
 }
 
 @media (max-width: 809px) {
+    .spirit-bound-overview .custom-container {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "problem"
+            "contributions"
+            "solution";
+    }
+    .spirit-bound-diagrams .diagram-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
     .project-img-2-col.spirit-bound-diagrams .custom-container {
         padding: 0;
     }

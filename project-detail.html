@@ -38,8 +38,8 @@
     <!-- ===== Stylesheet ===== -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/swiper.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css?v=20261005-spirit-diagram-titles">
-    <link rel="stylesheet" href="./assets/css/responsive.css?v=20261005-spirit-diagrams">
+    <link rel="stylesheet" href="./assets/css/style.css?v=20261005-spirit-contributions-layout">
+    <link rel="stylesheet" href="./assets/css/responsive.css?v=20261005-spirit-contributions-layout">
 </head>
 
 <body>
@@ -226,15 +226,15 @@
                     </div>
                 </div>
 
-                <div class="problem-and-solution-wrap">
+                <div class="problem-and-solution-wrap spirit-bound-only spirit-bound-overview">
                     <div class="custom-container">
-                        <div class="problem-solution-box">
+                        <div class="problem-solution-box problem-card">
                             <h4 class="subtitle common-box">Problem</h4>
                             <div class="content-box">
                                 <p>After four levels of running and jumping, the game needed a finale that felt different. The boss level had to teach a new ability quickly, build tension, and make damage easy to read.</p>
                             </div>
                         </div>
-                        <div class="problem-solution-box">
+                        <div class="problem-solution-box solution-card">
                             <h4 class="subtitle common-box">Solution</h4>
                             <div class="content-box">
                                 <ul class="solution-list">
@@ -246,17 +246,34 @@
                                 </ul>
                             </div>
                         </div>
+                        <div class="problem-solution-box contributions-card">
+                            <h4 class="subtitle common-box">Contributions</h4>
+                            <div class="content-box">
+                                <ul class="solution-list">
+                                    <li><strong>Level design:</strong> Designed Level 5's layout, the corridor into the boss fight, the arena, and the player's path from introduction to final exit.</li>
+                                    <li><strong>Boss design:</strong> Designed Mia as the final boss, including her laser attack, yarn weakness, health system, and defeat state.</li>
+                                    <li><strong>2D art:</strong> Designed Mia and created her sprites, Aseprite animations, and defeat animation, plus game-ready assets adapted from the team's Illustrator artwork.</li>
+                                    <li><strong>Implementation:</strong> Built the boss fight in Godot, including the laser, yarn damage, health behavior, and 0% defeat state, then tested and iterated on it.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-img-2-col spirit-bound-diagrams">
+                <div class="project-img-2-col spirit-bound-diagrams spirit-bound-only">
                     <div class="custom-container">
                         <div class="project-img-2-col-box">
-                            <h3 class="diagram-title">Level 5 Layout &amp; Player Flow: How the level paces the player from a calm corridor into the boss arena.</h3>
+                            <div class="diagram-heading">
+                                <h3 class="diagram-title common-box">Level 5 Layout &amp; Player Flow</h3>
+                                <p class="diagram-description">How the level paces the player from a calm corridor into the boss arena.</p>
+                            </div>
                             <img src="https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/project-1-diagram-2.webp" alt="Spirit Bound gameplay diagram 2">
                         </div>
                         <div class="project-img-2-col-box">
-                            <h3 class="diagram-title">Mia Boss Encounter Flow: The combat loop, player counter-play, and win/loss logic of the boss fight.</h3>
+                            <div class="diagram-heading">
+                                <h3 class="diagram-title common-box">Mia Boss Encounter Flow</h3>
+                                <p class="diagram-description">The combat loop, player counter-play, and win/loss logic of the boss fight.</p>
+                            </div>
                             <img src="https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/project-1-diagram-1.webp" alt="Spirit Bound gameplay diagram 1">
                         </div>
                     </div>
@@ -422,7 +439,7 @@
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/swiper.min.js"></script>
     <script src="./assets/js/moment.min.js"></script>
-    <script src="./assets/js/main.js?v=20261005-spirit-diagrams"></script>
+    <script src="./assets/js/main.js?v=20261005-spirit-contributions-layout"></script>
 </body>
 
 </html>
