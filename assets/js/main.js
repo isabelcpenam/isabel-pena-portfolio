@@ -135,6 +135,9 @@ if (projectDetailTitle) {
   document.querySelectorAll('.spirit-bound-only').forEach(function(section) {
     section.hidden = projectNumber !== 1;
   });
+  document.querySelectorAll('.non-spirit-bound-only').forEach(function(section) {
+    section.hidden = projectNumber === 1;
+  });
 }
 
 const humbergMenu = document.querySelector('.humberg-menu');

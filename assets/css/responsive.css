@@ -313,6 +313,18 @@
 }
 
 @media (max-width: 809px) {
+    .spirit-bound-credits .team-credit-list {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+    .project-details-hero-wrap .spirit-bound-game-frame {
+        height: auto;
+        min-height: 320px;
+        aspect-ratio: auto;
+    }
+    .project-details-hero-wrap .custom-container:has(.spirit-bound-game-frame) {
+        padding: 8px;
+    }
     .spirit-bound-overview .custom-container {
         grid-template-columns: minmax(0, 1fr);
         grid-template-rows: auto;

@@ -1388,6 +1388,40 @@ main {
     margin: 0;
     font-weight: 300;
 }
+.spirit-bound-reflection .subtitle,
+.spirit-bound-credits .subtitle {
+    display: inline-block;
+    margin: 0 0 18px;
+    padding: 12px 14px;
+}
+.spirit-bound-game-frame {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1152 / 668;
+    border: 0;
+    background: #333;
+}
+.spirit-bound-credits .team-credit-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 28px;
+    margin: 20px 0;
+}
+.spirit-bound-credits .team-credit-list li {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+.spirit-bound-credits .team-credit-list strong,
+.spirit-bound-credits .project-details-content-box-2-inner p strong {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+}
 .project-detail-content-wrap {
     position: relative;
     width: 100%;
