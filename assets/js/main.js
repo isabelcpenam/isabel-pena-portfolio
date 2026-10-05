@@ -138,6 +138,45 @@ if (projectDetailTitle) {
   document.querySelectorAll('.non-spirit-bound-only').forEach(function(section) {
     section.hidden = projectNumber === 1;
   });
+
+  var relatedProjectCards = document.querySelectorAll('.project-detail-page .project-area .project-col-3 .project-slider-box');
+  if (relatedProjectCards.length) {
+    var availableProjects = [];
+    for (var candidateProject = 1; candidateProject <= 15; candidateProject++) {
+      if (candidateProject !== projectNumber) {
+        availableProjects.push(candidateProject);
+      }
+    }
+
+    for (var shuffleIndex = availableProjects.length - 1; shuffleIndex > 0; shuffleIndex--) {
+      var swapIndex = Math.floor(Math.random() * (shuffleIndex + 1));
+      var projectToSwap = availableProjects[shuffleIndex];
+      availableProjects[shuffleIndex] = availableProjects[swapIndex];
+      availableProjects[swapIndex] = projectToSwap;
+    }
+
+    var projectCategories = [
+      'Game Design', 'Web Development', 'Brand Marketing', 'SEO', 'Social Media',
+      'Robotic Automation', 'Ux Design', 'Web Development', 'Brand Marketing',
+      'SEO', 'Social Media', 'Robotic Automation', 'Ux Design', 'Web Development',
+      'Brand Marketing'
+    ];
+
+    relatedProjectCards.forEach(function(card, index) {
+      var relatedProjectNumber = availableProjects[index];
+      var relatedProjectLabel = getProjectLabel(relatedProjectNumber);
+      var projectImage = card.querySelector('.project-img img');
+
+      card.querySelector('.project-content h3').textContent = relatedProjectLabel;
+      card.querySelector('.project-content p').textContent = projectCategories[relatedProjectNumber - 1];
+      projectImage.src = 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/project-' + relatedProjectNumber + '.webp';
+      projectImage.alt = relatedProjectLabel;
+
+      card.querySelectorAll('a').forEach(function(link) {
+        link.href = 'project-detail.html?project=' + relatedProjectNumber;
+      });
+    });
+  }
 }
 
 const humbergMenu = document.querySelector('.humberg-menu');
