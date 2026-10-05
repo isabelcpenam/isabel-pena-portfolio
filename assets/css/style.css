@@ -1264,6 +1264,22 @@ main {
     display: flex;
     gap: 18px;
 }
+.project-img-2-col.spirit-bound-diagrams .custom-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.spirit-bound-diagrams .project-img-2-col-box {
+    width: 100%;
+}
+.spirit-bound-diagrams .project-img-2-col-box img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.spirit-bound-diagrams .project-img-2-col-box:hover img {
+    transform: none;
+}
 .problem-solution-box .subtitle {
     margin-bottom: 18px;
 }
@@ -1293,6 +1309,22 @@ main {
     font-weight: 300;
 }
 .problem-solution-box .content-box p:last-child {
+    margin-bottom: 0;
+}
+.problem-solution-box .content-box .solution-list {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+.problem-solution-box .content-box .solution-list li {
+    font-size: 13px;
+    letter-spacing: 0.23px;
+    line-height: 22.5px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 12px;
+    font-weight: 300;
+}
+.problem-solution-box .content-box .solution-list li:last-child {
     margin-bottom: 0;
 }
 .project-details-content-box-2 {

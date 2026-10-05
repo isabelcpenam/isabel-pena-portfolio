@@ -313,6 +313,9 @@
 }
 
 @media (max-width: 809px) {
+    .project-img-2-col.spirit-bound-diagrams .custom-container {
+        padding: 0;
+    }
     .project-details-hero-wrap .project-video-container {
         padding: 0;
     }
