@@ -950,7 +950,6 @@
         let background = "#000000";
         let baseColor = "#9b3f2f";
         let glowColor = "#5a1715";
-        let markerColor = "#c45c35";
 
         function convertRGB(color) {
             // Remove '#' from the beginning of the color string if present
@@ -967,7 +966,6 @@
 
         let baseConvert = convertRGB(baseColor);
         let glowConvert = convertRGB(glowColor);
-        let markerConvert = convertRGB(markerColor);
 
         const globe = createGlobe(canvas, {
             devicePixelRatio: 1,
@@ -980,14 +978,8 @@
             diffuse: 2,
             mapSamples: 20000,
             mapBrightness: 10,
-            markerColor: [markerConvert.r, markerConvert.g, markerConvert.b],
             baseColor: [baseConvert.r, baseConvert.g, baseConvert.b],
             glowColor: [glowConvert.r, glowConvert.g, glowConvert.b],
-            markerSize: .1,
-            markers: [
-            { location: [37.7595, -122.4367], size: 0.03 },
-            { location: [40.7128, -74.006], size: 0.1 },
-            ],
             onRender: (state) => {
                 state.phi = phi
                 phi += 0.01
