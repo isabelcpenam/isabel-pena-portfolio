@@ -1271,6 +1271,13 @@ main {
 .spirit-bound-diagrams .project-img-2-col-box {
     width: 100%;
 }
+.spirit-bound-diagrams .diagram-title {
+    margin: 8px 8px 16px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.45;
+}
 .spirit-bound-diagrams .project-img-2-col-box img {
     width: 100%;
     max-width: 100%;
