@@ -129,6 +129,7 @@ if (projectDetailTitle) {
     : 1;
   var projectLabel = getProjectLabel(projectNumber);
 
+  document.title = 'Isabel Pena - ' + projectLabel;
   projectDetailTitle.textContent = projectLabel;
   document.querySelector('#project-detail-name').textContent = projectLabel;
 
@@ -185,5 +186,4 @@ const sidebarMenu = document.querySelector('.sticky-sidebar');
 humbergMenu.addEventListener('click', function() {
   sidebarMenu.classList.toggle('active-nav');
 });
-
 
