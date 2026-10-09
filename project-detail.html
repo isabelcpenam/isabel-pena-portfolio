@@ -38,8 +38,8 @@
     <!-- ===== Stylesheet ===== -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/swiper.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css?v=20261008-podcast-layout">
-    <link rel="stylesheet" href="./assets/css/responsive.css?v=20261008-podcast-layout">
+    <link rel="stylesheet" href="./assets/css/style.css?v=20261009-podcast-video-pair">
+    <link rel="stylesheet" href="./assets/css/responsive.css?v=20261009-podcast-video-pair">
 </head>
 
 <body>
@@ -273,11 +273,20 @@
 
                 <div class="project-details-hero-wrap non-spirit-bound-only">
                     <div class="custom-container">
-                        <div class="project-details-hero-img">
+                        <div class="project-details-hero-img placeholder-default-only">
                             <img src="https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/project-detail-hero.webp" alt="Project">
-                            <video class="podcast-booking-hero-video" autoplay loop muted playsinline hidden>
-                                <source src="https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/v2-project-detail-hero.mp4" type="video/mp4">
-                            </video>
+                        </div>
+                        <div class="podcast-hero-video-pair project-two-only" hidden>
+                            <div class="podcast-hero-video-frame podcast-hero-desktop-frame">
+                                <video class="podcast-booking-hero-video" autoplay loop muted playsinline>
+                                    <source src="https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/v2-project-detail-hero.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="podcast-hero-video-frame podcast-hero-mobile-frame">
+                                <video class="podcast-booking-mobile-hero-video" autoplay loop muted playsinline>
+                                    <source src="https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/phone-v2-project-detail-hero.mp4" type="video/mp4">
+                                </video>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -443,6 +452,20 @@
                                 <div class="content-box">
                                     <p>This project strengthened my ability to think beyond the visual layer of a design and consider the complete experience—from information hierarchy and interaction design through implementation, third-party integrations, responsive behavior, and the final production experience.</p>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="podcast-desktop-mockup" role="group" aria-label="Scrollable desktop preview of the podcast booking page">
+                            <div class="podcast-desktop-bar">
+                                <span class="podcast-window-dot podcast-window-dot-red" aria-hidden="true"></span>
+                                <span class="podcast-window-dot podcast-window-dot-yellow" aria-hidden="true"></span>
+                                <span class="podcast-window-dot podcast-window-dot-green" aria-hidden="true"></span>
+                                <span class="podcast-desktop-url">yachtkings.tv/podcast</span>
+                            </div>
+                            <div class="podcast-desktop-screen" tabindex="0" aria-label="Scroll to preview the full podcast booking page">
+                                <picture>
+                                    <source media="(max-width: 767px)" srcset="https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/podcast_mobile_view.jpg">
+                                    <img src="https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/yachtkings-podcast.webp" alt="Full-page preview of the Yacht Kings podcast booking experience">
+                                </picture>
                             </div>
                         </div>
                     </div>
@@ -647,7 +670,7 @@
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/swiper.min.js"></script>
     <script src="./assets/js/moment.min.js"></script>
-    <script src="./assets/js/main.js?v=20261008-podcast-detail-spacing-fix"></script>
+    <script src="./assets/js/main.js?v=20261009-podcast-video-pair"></script>
 </body>
 
 </html>

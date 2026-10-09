@@ -221,9 +221,9 @@ if (projectDetailTitle) {
     nonSpiritHeroImage.hidden = projectNumber === 2;
   }
 
-  var podcastBookingHeroVideo = document.querySelector('.podcast-booking-hero-video');
-  if (podcastBookingHeroVideo) {
-    podcastBookingHeroVideo.hidden = projectNumber !== 2;
+  var podcastHeroVideoPair = document.querySelector('.podcast-hero-video-pair');
+  if (podcastHeroVideoPair) {
+    podcastHeroVideoPair.hidden = projectNumber !== 2;
   }
 
   document.querySelectorAll('.spirit-bound-only').forEach(function(section) {
