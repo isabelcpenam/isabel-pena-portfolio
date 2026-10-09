@@ -95,6 +95,12 @@ if ($('#current-time').length) {
   document.querySelector('#current-time').textContent = currentTime;
 }
 
+var hiddenProjectNumbers = [10, 11, 12, 13, 14, 15];
+
+function isHiddenProjectNumber(projectNumber) {
+  return hiddenProjectNumbers.indexOf(projectNumber) !== -1;
+}
+
 function getProjectMetadata(projectNumber) {
   if (projectNumber === 1) {
     return {
@@ -147,7 +153,7 @@ document.querySelectorAll('.projects-page .project-slider-box, .project-slider .
 var projectDetailTitle = document.querySelector('#project-detail-title');
 if (projectDetailTitle) {
   var requestedProject = Number(new URLSearchParams(window.location.search).get('project'));
-  var projectNumber = Number.isInteger(requestedProject) && requestedProject >= 1 && requestedProject <= 15
+  var projectNumber = Number.isInteger(requestedProject) && requestedProject >= 1 && requestedProject <= 15 && !isHiddenProjectNumber(requestedProject)
     ? requestedProject
     : 1;
   var projectMetadata = getProjectMetadata(projectNumber);
@@ -180,7 +186,7 @@ if (projectDetailTitle) {
   if (relatedProjectCards.length) {
     var availableProjects = [];
     for (var candidateProject = 1; candidateProject <= 15; candidateProject++) {
-      if (candidateProject !== projectNumber) {
+      if (candidateProject !== projectNumber && !isHiddenProjectNumber(candidateProject)) {
         availableProjects.push(candidateProject);
       }
     }
