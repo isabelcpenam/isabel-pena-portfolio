@@ -199,10 +199,32 @@ if (projectDetailTitle) {
     projectCategoryLabel.textContent = projectMetadata.category;
   }
 
+  if (projectNumber === 2) {
+    document.querySelector('#project-detail-intro').textContent = 'The agency already had an established website, but its podcast booking process needed a dedicated experience that made it easier for prospective guests to understand the opportunity, review available information, select a booking time, and complete the booking process. I was responsible for designing and implementing a dedicated podcast booking page within the existing WordPress ecosystem, while connecting the necessary scheduling and payment functionality.';
+
+    var projectTwoFacts = [
+      ['Role', 'UI/UX Designer · Web Designer · WordPress/Elementor Implementation'],
+      ['Date', 'February 2026'],
+      ['Disciplines', 'UI/UX · Interaction Design · Web Design · No-Code Implementation'],
+      ['Tools', 'Figma · Elementor · WordPress · Acuity Scheduling · Stripe']
+    ];
+
+    projectTwoFacts.forEach(function(fact, index) {
+      document.querySelector('#project-detail-fact-' + (index + 1) + '-label').textContent = fact[0];
+      document.querySelector('#project-detail-fact-' + (index + 1) + '-value').textContent = fact[1];
+    });
+  }
+
   var nonSpiritHeroImage = document.querySelector('.project-details-hero-wrap.non-spirit-bound-only .project-details-hero-img img');
   if (nonSpiritHeroImage) {
     nonSpiritHeroImage.src = getProjectImage(projectNumber);
     nonSpiritHeroImage.alt = projectMetadata.title;
+    nonSpiritHeroImage.hidden = projectNumber === 2;
+  }
+
+  var podcastBookingHeroVideo = document.querySelector('.podcast-booking-hero-video');
+  if (podcastBookingHeroVideo) {
+    podcastBookingHeroVideo.hidden = projectNumber !== 2;
   }
 
   document.querySelectorAll('.spirit-bound-only').forEach(function(section) {
