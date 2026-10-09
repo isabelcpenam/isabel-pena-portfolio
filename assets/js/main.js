@@ -232,6 +232,12 @@ if (projectDetailTitle) {
   document.querySelectorAll('.non-spirit-bound-only').forEach(function(section) {
     section.hidden = projectNumber === 1;
   });
+  document.querySelectorAll('.project-two-only').forEach(function(content) {
+    content.hidden = projectNumber !== 2;
+  });
+  document.querySelectorAll('.placeholder-default-only').forEach(function(content) {
+    content.hidden = projectNumber === 2;
+  });
 
   var relatedProjectCards = document.querySelectorAll('.project-detail-page .project-area .project-col-3 .project-slider-box');
   if (relatedProjectCards.length) {
