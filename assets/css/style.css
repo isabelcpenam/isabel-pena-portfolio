@@ -1507,6 +1507,49 @@ main {
 .podcast-desktop-screen::-webkit-scrollbar-thumb:hover {
     background: #80544b;
 }
+.swimwear-site-mockup {
+    max-width: 1100px;
+    margin: 32px auto 0;
+    overflow: hidden;
+    border: 1px solid rgba(252, 252, 252, 0.1);
+    background: #100807;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 12px 36px;
+}
+.swimwear-site-screen {
+    position: relative;
+    height: 620px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #fff;
+    scrollbar-color: #59342e #160e0c;
+    scrollbar-width: thin;
+}
+.swimwear-site-document {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+}
+.swimwear-site-screen iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 1200px;
+    height: 100%;
+    border: 0;
+    transform-origin: top left;
+}
+.swimwear-site-screen::-webkit-scrollbar {
+    width: 9px;
+}
+.swimwear-site-screen::-webkit-scrollbar-track {
+    background: #160e0c;
+}
+.swimwear-site-screen::-webkit-scrollbar-thumb {
+    border: 2px solid #160e0c;
+    border-radius: 8px;
+    background: #59342e;
+}
 .problem-solution-box .content-box .solution-list {
     list-style: disc;
     padding-left: 20px;

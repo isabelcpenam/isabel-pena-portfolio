@@ -358,6 +358,9 @@
     .podcast-desktop-screen {
         height: 500px;
     }
+    .swimwear-site-screen {
+        height: 500px;
+    }
     .podcast-hero-video-frame {
         height: clamp(240px, 42vw, 360px);
     }
@@ -376,6 +379,9 @@
     }
     .podcast-desktop-screen {
         height: 380px;
+    }
+    .swimwear-site-screen {
+        height: 420px;
     }
     .podcast-hero-video-pair {
         flex-direction: column;

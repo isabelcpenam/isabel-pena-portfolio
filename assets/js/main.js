@@ -121,7 +121,7 @@ function getProjectMetadata(projectNumber) {
   if (projectNumber === 3) {
     return {
       title: 'Swimwear Website Concept',
-      category: 'Web Development'
+      category: 'Web Design'
     };
   }
 
@@ -221,6 +221,9 @@ if (projectDetailTitle) {
   document.querySelectorAll('.project-two-only').forEach(function(content) {
     content.hidden = projectNumber !== 2;
   });
+  document.querySelectorAll('.project-three-only').forEach(function(content) {
+    content.hidden = projectNumber !== 3;
+  });
   document.querySelectorAll('.placeholder-default-only').forEach(function(content) {
     content.hidden = projectNumber === 2;
   });
@@ -235,6 +238,37 @@ if (projectDetailTitle) {
   var podcastHeroVideoPair = document.querySelector('.podcast-hero-video-pair');
   if (podcastHeroVideoPair) {
     podcastHeroVideoPair.hidden = projectNumber !== 2;
+  }
+
+  var swimwearSiteScreen = document.querySelector('.swimwear-site-screen');
+  var swimwearSiteFrame = swimwearSiteScreen && swimwearSiteScreen.querySelector('iframe');
+  if (swimwearSiteScreen && swimwearSiteFrame) {
+    var swimwearSiteDocument = swimwearSiteScreen.querySelector('.swimwear-site-document');
+    var fitSwimwearSite = function() {
+      var frameDocument = swimwearSiteFrame.contentDocument;
+      if (!frameDocument || !frameDocument.documentElement || !swimwearSiteScreen.clientWidth) {
+        return;
+      }
+
+      var frameWidth = 1200;
+      var scale = Math.min(1, swimwearSiteScreen.clientWidth / frameWidth);
+      var contentHeight = Math.max(
+        frameDocument.documentElement.scrollHeight,
+        frameDocument.body ? frameDocument.body.scrollHeight : 0
+      );
+
+      frameDocument.documentElement.style.overflowX = 'hidden';
+      swimwearSiteFrame.style.width = frameWidth + 'px';
+      swimwearSiteFrame.style.height = contentHeight + 'px';
+      swimwearSiteFrame.style.transform = 'scale(' + scale + ')';
+      swimwearSiteDocument.style.height = contentHeight * scale + 'px';
+    };
+
+    swimwearSiteFrame.addEventListener('load', fitSwimwearSite);
+    new ResizeObserver(fitSwimwearSite).observe(swimwearSiteScreen);
+    if (swimwearSiteFrame.contentDocument.readyState === 'complete') {
+      fitSwimwearSite();
+    }
   }
 
   document.querySelectorAll('.spirit-bound-only').forEach(function(section) {
