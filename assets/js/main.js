@@ -131,11 +131,25 @@ function getProjectLabel(projectNumber) {
   return getProjectMetadata(projectNumber).title;
 }
 
+function getProjectImage(projectNumber) {
+  if (projectNumber === 1) {
+    return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/project-1-v1.webp';
+  }
+
+  return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/project-' + projectNumber + '.webp';
+}
+
 document.querySelectorAll('.projects-page .project-slider-box, .project-slider .project-slider-box').forEach(function(card, index) {
   var projectNumber = index + 1;
+  if (isHiddenProjectNumber(projectNumber)) {
+    card.hidden = true;
+    return;
+  }
+
   var projectMetadata = getProjectMetadata(projectNumber);
   var projectTitle = card.querySelector('.project-content h3');
   var projectCategory = card.querySelector('.project-content p');
+  var projectImage = card.querySelector('.project-img img');
 
   if (projectTitle) {
     projectTitle.textContent = projectMetadata.title;
@@ -143,6 +157,11 @@ document.querySelectorAll('.projects-page .project-slider-box, .project-slider .
 
   if (projectCategory) {
     projectCategory.textContent = projectMetadata.category;
+  }
+
+  if (projectImage) {
+    projectImage.src = getProjectImage(projectNumber);
+    projectImage.alt = projectMetadata.title;
   }
 
   card.querySelectorAll('a[href="project-detail.html"]').forEach(function(link) {
@@ -169,9 +188,7 @@ if (projectDetailTitle) {
 
   var nonSpiritHeroImage = document.querySelector('.project-details-hero-wrap.non-spirit-bound-only .project-details-hero-img img');
   if (nonSpiritHeroImage) {
-    nonSpiritHeroImage.src = projectNumber === 2
-      ? 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/project-2.webp'
-      : 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/project-detail-hero.webp';
+    nonSpiritHeroImage.src = getProjectImage(projectNumber);
     nonSpiritHeroImage.alt = projectMetadata.title;
   }
 
@@ -205,7 +222,7 @@ if (projectDetailTitle) {
 
       card.querySelector('.project-content h3').textContent = relatedProjectMetadata.title;
       card.querySelector('.project-content p').textContent = relatedProjectMetadata.category;
-      projectImage.src = 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/project-' + relatedProjectNumber + '.webp';
+      projectImage.src = getProjectImage(relatedProjectNumber);
       projectImage.alt = relatedProjectMetadata.title;
 
       card.querySelectorAll('a').forEach(function(link) {
