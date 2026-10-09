@@ -1355,6 +1355,44 @@ main {
 .problem-solution-box .content-box p:last-child {
     margin-bottom: 0;
 }
+.project-detail-page [hidden] {
+    display: none !important;
+}
+.project-two-only .podcast-process-list {
+    margin: 18px 0;
+    padding-left: 42px;
+    color: rgba(255, 255, 255, 0.6);
+}
+.project-two-only .podcast-process-list li {
+    padding-left: 8px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 0.23px;
+    line-height: 22.5px;
+}
+.project-two-only .podcast-process-list li:last-child {
+    margin-bottom: 0;
+}
+.project-two-only .podcast-process-list strong {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+}
+.podcast-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 18px;
+}
+.podcast-summary-grid .problem-solution-box {
+    min-width: 0;
+}
+.podcast-summary-grid .content-box {
+    height: calc(100% - 44px);
+}
+.podcast-summary-grid .content-box p {
+    margin: 0;
+}
 .problem-solution-box .content-box .solution-list {
     list-style: disc;
     padding-left: 20px;
