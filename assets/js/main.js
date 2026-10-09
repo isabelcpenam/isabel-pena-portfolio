@@ -3,7 +3,8 @@
 
 
 // Project Slider
-var swiper = new Swiper(".project-slider", {
+var projectSlider = document.querySelector(".project-slider");
+var swiper = projectSlider ? new Swiper(projectSlider, {
     spaceBetween: 18,
     slidesPerView: 3,
     speed: 1500,
@@ -20,12 +21,13 @@ var swiper = new Swiper(".project-slider", {
         slidesPerView: 3
       }
     }
-});
+}) : null;
 
 
 
 // Testimonial
-var swiper2 = new Swiper(".testimonial-slider", {
+var testimonialSlider = document.querySelector(".testimonial-slider");
+var swiper2 = testimonialSlider ? new Swiper(testimonialSlider, {
     spaceBetween: 18,
     slidesPerView: 2,
     loop: false,
@@ -49,7 +51,7 @@ var swiper2 = new Swiper(".testimonial-slider", {
         slidesPerView: 2
       }
     }
-});
+}) : null;
 
 
 // Gallery
