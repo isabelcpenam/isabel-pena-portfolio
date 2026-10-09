@@ -252,10 +252,9 @@ if (projectDetailTitle) {
 
       var frameWidth = 1000;
       var scale = swimwearSiteScreen.clientWidth / frameWidth;
-      var contentHeight = Math.max(
-        frameDocument.documentElement.scrollHeight,
-        frameDocument.body ? frameDocument.body.scrollHeight : 0
-      );
+      var contentHeight = frameDocument.body
+        ? frameDocument.body.scrollHeight
+        : frameDocument.documentElement.scrollHeight;
 
       frameDocument.documentElement.style.overflowX = 'hidden';
       swimwearSiteFrame.style.width = frameWidth + 'px';
