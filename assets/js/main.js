@@ -118,6 +118,13 @@ function getProjectMetadata(projectNumber) {
     };
   }
 
+  if (projectNumber === 3) {
+    return {
+      title: 'Swimwear Website Concept',
+      category: 'Web Development'
+    };
+  }
+
   var lastTwoDigits = projectNumber % 100;
   var suffix = lastTwoDigits >= 11 && lastTwoDigits <= 13
     ? 'th'
@@ -144,6 +151,10 @@ function getProjectImage(projectNumber) {
 function getProjectThumbnail(projectNumber) {
   if (projectNumber === 2) {
     return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/2v2-project-2.webp';
+  }
+
+  if (projectNumber === 3) {
+    return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/v3project-3.webp';
   }
 
   return getProjectImage(projectNumber);
