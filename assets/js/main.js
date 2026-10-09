@@ -224,15 +224,19 @@ if (projectDetailTitle) {
   document.querySelectorAll('.project-three-only').forEach(function(content) {
     content.hidden = projectNumber !== 3;
   });
+  document.querySelectorAll('.project-default-metadata-only').forEach(function(content) {
+    content.hidden = projectNumber === 2 || projectNumber === 3;
+  });
   document.querySelectorAll('.placeholder-default-only').forEach(function(content) {
-    content.hidden = projectNumber === 2;
+    content.hidden = projectNumber === 2 || projectNumber === 3;
   });
 
-  var nonSpiritHeroImage = document.querySelector('.project-details-hero-wrap.non-spirit-bound-only .project-details-hero-img img');
+  var nonSpiritHero = document.querySelector('.project-details-hero-wrap.non-spirit-bound-only .project-detail-default-hero');
+  var nonSpiritHeroImage = nonSpiritHero && nonSpiritHero.querySelector('img');
   if (nonSpiritHeroImage) {
     nonSpiritHeroImage.src = getProjectImage(projectNumber);
     nonSpiritHeroImage.alt = projectMetadata.title;
-    nonSpiritHeroImage.hidden = projectNumber === 2;
+    nonSpiritHero.hidden = projectNumber === 2 || projectNumber === 3;
   }
 
   var podcastHeroVideoPair = document.querySelector('.podcast-hero-video-pair');
@@ -276,11 +280,14 @@ if (projectDetailTitle) {
   document.querySelectorAll('.non-spirit-bound-only').forEach(function(section) {
     section.hidden = projectNumber === 1;
   });
+  document.querySelectorAll('.project-three-only').forEach(function(content) {
+    content.hidden = projectNumber !== 3;
+  });
   document.querySelectorAll('.project-two-only').forEach(function(content) {
     content.hidden = projectNumber !== 2;
   });
   document.querySelectorAll('.placeholder-default-only').forEach(function(content) {
-    content.hidden = projectNumber === 2;
+    content.hidden = projectNumber === 2 || projectNumber === 3;
   });
 
   var relatedProjectCards = document.querySelectorAll('.project-detail-page .project-area .project-col-3 .project-slider-box');

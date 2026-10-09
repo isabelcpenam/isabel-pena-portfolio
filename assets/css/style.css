@@ -1550,6 +1550,52 @@ main {
     border-radius: 8px;
     background: #59342e;
 }
+.project-three-details .custom-container {
+    display: block;
+}
+.project-three-details .project-details-content-box-2-inner .subtitle {
+    display: inline-block;
+    margin: 0 0 18px;
+    padding: 12px 14px;
+}
+.project-three-details .project-details-content-box-2-inner h5 {
+    margin: 18px 0 8px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    font-weight: 500;
+}
+.project-three-details .project-details-content-box-2-inner h5:first-of-type {
+    margin-top: 0;
+}
+.project-three-diagrams {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    max-width: 1100px;
+    margin: 18px auto;
+}
+.project-three-diagrams .project-img-2-col-box {
+    width: 100%;
+}
+.project-three-diagrams .project-img-2-col-box img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.project-three-diagrams .project-img-2-col-box:hover img {
+    transform: none;
+}
+.project-three-outcomes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+.project-three-outcomes .project-details-content-box-2 {
+    margin-bottom: 0;
+}
+.project-three-preview {
+    margin-top: 18px;
+}
 .problem-solution-box .content-box .solution-list {
     list-style: disc;
     padding-left: 20px;
