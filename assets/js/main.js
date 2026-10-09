@@ -141,7 +141,7 @@ function getProjectImage(projectNumber) {
 
 document.querySelectorAll('.projects-page .project-slider-box, .project-slider .project-slider-box').forEach(function(card, index) {
   var projectNumber = index + 1;
-  if (isHiddenProjectNumber(projectNumber)) {
+  if (projectNumber > 9) {
     card.hidden = true;
     return;
   }
@@ -168,6 +168,17 @@ document.querySelectorAll('.projects-page .project-slider-box, .project-slider .
     link.href = 'project-detail.html?project=' + projectNumber;
   });
 });
+
+document.querySelectorAll('.project-slider .swiper-slide').forEach(function(slide) {
+  var slideCards = slide.querySelectorAll('.project-slider-box');
+  slide.hidden = Array.prototype.every.call(slideCards, function(card) {
+    return card.hidden;
+  });
+});
+
+if (swiper) {
+  swiper.update();
+}
 
 var projectDetailTitle = document.querySelector('#project-detail-title');
 if (projectDetailTitle) {
