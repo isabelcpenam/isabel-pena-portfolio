@@ -141,6 +141,14 @@ function getProjectImage(projectNumber) {
   return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/project-' + projectNumber + '.webp';
 }
 
+function getProjectThumbnail(projectNumber) {
+  if (projectNumber === 2) {
+    return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/2v2-project-2.webp';
+  }
+
+  return getProjectImage(projectNumber);
+}
+
 document.querySelectorAll('.projects-page .project-slider-box, .project-slider .project-slider-box').forEach(function(card, index) {
   var projectNumber = index + 1;
   if (projectNumber > 9) {
@@ -162,7 +170,7 @@ document.querySelectorAll('.projects-page .project-slider-box, .project-slider .
   }
 
   if (projectImage) {
-    projectImage.src = getProjectImage(projectNumber);
+    projectImage.src = getProjectThumbnail(projectNumber);
     projectImage.alt = projectMetadata.title;
   }
 
