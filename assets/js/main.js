@@ -201,12 +201,10 @@ if (projectDetailTitle) {
 
   var relatedProjectCards = document.querySelectorAll('.project-detail-page .project-area .project-col-3 .project-slider-box');
   if (relatedProjectCards.length) {
-    var availableProjects = [];
-    for (var candidateProject = 1; candidateProject <= 15; candidateProject++) {
-      if (candidateProject !== projectNumber && !isHiddenProjectNumber(candidateProject)) {
-        availableProjects.push(candidateProject);
-      }
-    }
+    var availableProjects = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+      .filter(function(candidateProject) {
+        return candidateProject !== projectNumber;
+      });
 
     for (var shuffleIndex = availableProjects.length - 1; shuffleIndex > 0; shuffleIndex--) {
       var swapIndex = Math.floor(Math.random() * (shuffleIndex + 1));
@@ -217,6 +215,12 @@ if (projectDetailTitle) {
 
     relatedProjectCards.forEach(function(card, index) {
       var relatedProjectNumber = availableProjects[index];
+      if (relatedProjectNumber === undefined) {
+        card.hidden = true;
+        return;
+      }
+
+      card.hidden = false;
       var relatedProjectMetadata = getProjectMetadata(relatedProjectNumber);
       var projectImage = card.querySelector('.project-img img');
 
@@ -238,4 +242,3 @@ const sidebarMenu = document.querySelector('.sticky-sidebar');
 humbergMenu.addEventListener('click', function() {
   sidebarMenu.classList.toggle('active-nav');
 });
-
