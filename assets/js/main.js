@@ -250,8 +250,8 @@ if (projectDetailTitle) {
         return;
       }
 
-      var frameWidth = 1200;
-      var scale = Math.min(1, swimwearSiteScreen.clientWidth / frameWidth);
+      var frameWidth = 1000;
+      var scale = swimwearSiteScreen.clientWidth / frameWidth;
       var contentHeight = Math.max(
         frameDocument.documentElement.scrollHeight,
         frameDocument.body ? frameDocument.body.scrollHeight : 0
