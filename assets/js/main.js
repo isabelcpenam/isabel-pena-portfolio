@@ -95,9 +95,19 @@ if ($('#current-time').length) {
   document.querySelector('#current-time').textContent = currentTime;
 }
 
-function getProjectLabel(projectNumber) {
+function getProjectMetadata(projectNumber) {
   if (projectNumber === 1) {
-    return 'Spirit Bound';
+    return {
+      title: 'Spirit Bound',
+      category: 'Game Design'
+    };
+  }
+
+  if (projectNumber === 2) {
+    return {
+      title: 'Podcast Booking Experience',
+      category: 'UI/UX Design'
+    };
   }
 
   var lastTwoDigits = projectNumber % 100;
@@ -105,15 +115,28 @@ function getProjectLabel(projectNumber) {
     ? 'th'
     : ({ 1: 'st', 2: 'nd', 3: 'rd' }[projectNumber % 10] || 'th');
 
-  return projectNumber + suffix + ' Project';
+  return {
+    title: projectNumber + suffix + ' Project',
+    category: 'Web Development'
+  };
+}
+
+function getProjectLabel(projectNumber) {
+  return getProjectMetadata(projectNumber).title;
 }
 
 document.querySelectorAll('.projects-page .project-slider-box, .project-slider .project-slider-box').forEach(function(card, index) {
   var projectNumber = index + 1;
+  var projectMetadata = getProjectMetadata(projectNumber);
   var projectTitle = card.querySelector('.project-content h3');
+  var projectCategory = card.querySelector('.project-content p');
 
   if (projectTitle) {
-    projectTitle.textContent = getProjectLabel(projectNumber);
+    projectTitle.textContent = projectMetadata.title;
+  }
+
+  if (projectCategory) {
+    projectCategory.textContent = projectMetadata.category;
   }
 
   card.querySelectorAll('a[href="project-detail.html"]').forEach(function(link) {
@@ -127,11 +150,24 @@ if (projectDetailTitle) {
   var projectNumber = Number.isInteger(requestedProject) && requestedProject >= 1 && requestedProject <= 15
     ? requestedProject
     : 1;
-  var projectLabel = getProjectLabel(projectNumber);
+  var projectMetadata = getProjectMetadata(projectNumber);
 
-  document.title = 'Isabel Pena - ' + projectLabel;
-  projectDetailTitle.textContent = projectLabel;
-  document.querySelector('#project-detail-name').textContent = projectLabel;
+  document.title = 'Isabel Pena - ' + projectMetadata.title;
+  projectDetailTitle.textContent = projectMetadata.title;
+  document.querySelector('#project-detail-name').textContent = projectMetadata.title;
+
+  var projectCategoryLabel = document.querySelector('.project-detail-top.non-spirit-bound-only .project-top-content span');
+  if (projectCategoryLabel) {
+    projectCategoryLabel.textContent = projectMetadata.category;
+  }
+
+  var nonSpiritHeroImage = document.querySelector('.project-details-hero-wrap.non-spirit-bound-only .project-details-hero-img img');
+  if (nonSpiritHeroImage) {
+    nonSpiritHeroImage.src = projectNumber === 2
+      ? 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/project-2.webp'
+      : 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/project-detail-hero.webp';
+    nonSpiritHeroImage.alt = projectMetadata.title;
+  }
 
   document.querySelectorAll('.spirit-bound-only').forEach(function(section) {
     section.hidden = projectNumber !== 1;
@@ -156,22 +192,15 @@ if (projectDetailTitle) {
       availableProjects[swapIndex] = projectToSwap;
     }
 
-    var projectCategories = [
-      'Game Design', 'Web Development', 'Brand Marketing', 'SEO', 'Social Media',
-      'Robotic Automation', 'Ux Design', 'Web Development', 'Brand Marketing',
-      'SEO', 'Social Media', 'Robotic Automation', 'Ux Design', 'Web Development',
-      'Brand Marketing'
-    ];
-
     relatedProjectCards.forEach(function(card, index) {
       var relatedProjectNumber = availableProjects[index];
-      var relatedProjectLabel = getProjectLabel(relatedProjectNumber);
+      var relatedProjectMetadata = getProjectMetadata(relatedProjectNumber);
       var projectImage = card.querySelector('.project-img img');
 
-      card.querySelector('.project-content h3').textContent = relatedProjectLabel;
-      card.querySelector('.project-content p').textContent = projectCategories[relatedProjectNumber - 1];
+      card.querySelector('.project-content h3').textContent = relatedProjectMetadata.title;
+      card.querySelector('.project-content p').textContent = relatedProjectMetadata.category;
       projectImage.src = 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/project-' + relatedProjectNumber + '.webp';
-      projectImage.alt = relatedProjectLabel;
+      projectImage.alt = relatedProjectMetadata.title;
 
       card.querySelectorAll('a').forEach(function(link) {
         link.href = 'project-detail.html?project=' + relatedProjectNumber;
