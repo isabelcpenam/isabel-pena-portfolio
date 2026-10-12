@@ -228,7 +228,7 @@ if (projectDetailTitle) {
     content.hidden = projectNumber === 2 || projectNumber === 3;
   });
   document.querySelectorAll('.placeholder-default-only').forEach(function(content) {
-    content.hidden = projectNumber === 2 || projectNumber === 3;
+    content.hidden = projectNumber === 1 || projectNumber === 2 || projectNumber === 3;
   });
 
   var nonSpiritHero = document.querySelector('.project-details-hero-wrap.non-spirit-bound-only .project-detail-default-hero');
@@ -287,7 +287,7 @@ if (projectDetailTitle) {
     content.hidden = projectNumber !== 2;
   });
   document.querySelectorAll('.placeholder-default-only').forEach(function(content) {
-    content.hidden = projectNumber === 2 || projectNumber === 3;
+    content.hidden = projectNumber === 1 || projectNumber === 2 || projectNumber === 3;
   });
 
   var relatedProjectCards = document.querySelectorAll('.project-detail-page .project-area .project-col-3 .project-slider-box');
