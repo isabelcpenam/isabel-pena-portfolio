@@ -157,7 +157,7 @@ function getProjectImage(projectNumber) {
 
 function getProjectThumbnail(projectNumber) {
   if (projectNumber === 1) {
-    return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/spirit-bound-thumbnail.jpg';
+    return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/spirit-bound-thumbnail.jpg?v=20261012-thumbnail';
   }
 
   if (projectNumber === 2) {
