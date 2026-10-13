@@ -125,13 +125,6 @@ function getProjectMetadata(projectNumber) {
     };
   }
 
-  if (projectNumber === 4) {
-    return {
-      title: 'Pet Care Mobile App Design',
-      category: 'UI/UX Design'
-    };
-  }
-
   var lastTwoDigits = projectNumber % 100;
   var suffix = lastTwoDigits >= 11 && lastTwoDigits <= 13
     ? 'th'
@@ -166,10 +159,6 @@ function getProjectThumbnail(projectNumber) {
 
   if (projectNumber === 3) {
     return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/v3project-3.webp';
-  }
-
-  if (projectNumber === 4) {
-    return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/petpal-thumbnail.jpg';
   }
 
   return getProjectImage(projectNumber);
@@ -239,14 +228,8 @@ if (projectDetailTitle) {
   document.querySelectorAll('.project-three-only').forEach(function(content) {
     content.hidden = projectNumber !== 3;
   });
-  document.querySelectorAll('.project-four-only').forEach(function(content) {
-    content.hidden = projectNumber !== 4;
-  });
-  document.querySelectorAll('.project-default-title-only').forEach(function(content) {
-    content.hidden = projectNumber === 4;
-  });
   document.querySelectorAll('.project-default-metadata-only').forEach(function(content) {
-    content.hidden = projectNumber === 2 || projectNumber === 3 || projectNumber === 4;
+    content.hidden = projectNumber === 2 || projectNumber === 3;
   });
   document.querySelectorAll('.placeholder-default-only').forEach(function(content) {
     content.hidden = projectNumber === 1 || projectNumber === 2 || projectNumber === 3;
@@ -306,9 +289,6 @@ if (projectDetailTitle) {
   });
   document.querySelectorAll('.project-two-only').forEach(function(content) {
     content.hidden = projectNumber !== 2;
-  });
-  document.querySelectorAll('.project-four-only').forEach(function(content) {
-    content.hidden = projectNumber !== 4;
   });
   document.querySelectorAll('.placeholder-default-only').forEach(function(content) {
     content.hidden = projectNumber === 1 || projectNumber === 2 || projectNumber === 3;
