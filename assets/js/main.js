@@ -312,6 +312,9 @@ if (projectDetailTitle) {
   document.querySelectorAll('.placeholder-default-only').forEach(function(content) {
     content.hidden = projectNumber === 1 || projectNumber === 2 || projectNumber === 3;
   });
+  document.querySelectorAll('.project-four-placeholder-only').forEach(function(content) {
+    content.hidden = projectNumber === 4;
+  });
   document.querySelectorAll('.project-default-problem-solution-only').forEach(function(content) {
     content.hidden = projectNumber === 4;
   });
