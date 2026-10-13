@@ -368,7 +368,8 @@
 }
 
 @media (max-width: 600px) {
-    .project-three-outcomes {
+    .project-three-outcomes,
+    .project-four-outcomes {
         grid-template-columns: minmax(0, 1fr);
     }
     .podcast-summary-grid {
