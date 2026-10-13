@@ -1333,7 +1333,8 @@ main {
     font-size: 14px;
     line-height: 1.45;
 }
-.spirit-bound-overview .custom-container {
+.spirit-bound-overview .custom-container,
+.project-four-overview .custom-container {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
     grid-template-rows: auto minmax(0, 1fr);
@@ -1342,15 +1343,18 @@ main {
         "contributions solution";
     align-items: stretch;
 }
-.spirit-bound-overview .problem-card {
+.spirit-bound-overview .problem-card,
+.project-four-overview .problem-card {
     grid-area: problem;
     min-width: 0;
 }
-.spirit-bound-overview .solution-card {
+.spirit-bound-overview .solution-card,
+.project-four-overview .solution-card {
     grid-area: solution;
     min-width: 0;
 }
-.spirit-bound-overview .contributions-card {
+.spirit-bound-overview .contributions-card,
+.project-four-overview .contributions-card {
     grid-area: contributions;
     min-width: 0;
 }

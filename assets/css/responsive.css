@@ -325,7 +325,8 @@
     .project-details-hero-wrap .spirit-bound-game-container {
         padding: 8px;
     }
-    .spirit-bound-overview .custom-container {
+    .spirit-bound-overview .custom-container,
+    .project-four-overview .custom-container {
         grid-template-columns: minmax(0, 1fr);
         grid-template-rows: auto;
         grid-template-areas:
