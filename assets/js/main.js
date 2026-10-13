@@ -256,7 +256,7 @@ if (projectDetailTitle) {
   if (nonSpiritHeroImage) {
     nonSpiritHeroImage.src = getProjectImage(projectNumber);
     nonSpiritHeroImage.alt = projectMetadata.title;
-    nonSpiritHero.hidden = projectNumber === 2 || projectNumber === 3;
+    nonSpiritHero.hidden = projectNumber === 2 || projectNumber === 3 || projectNumber === 4;
   }
 
   var podcastHeroVideoPair = document.querySelector('.podcast-hero-video-pair');
