@@ -132,6 +132,13 @@ function getProjectMetadata(projectNumber) {
     };
   }
 
+  if (projectNumber === 5) {
+    return {
+      title: 'ITML Institute Landing Page Redesign',
+      category: 'UI/UX Design'
+    };
+  }
+
   var lastTwoDigits = projectNumber % 100;
   var suffix = lastTwoDigits >= 11 && lastTwoDigits <= 13
     ? 'th'
@@ -150,6 +157,10 @@ function getProjectLabel(projectNumber) {
 function getProjectImage(projectNumber) {
   if (projectNumber === 1) {
     return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/project-1-v1.webp';
+  }
+
+  if (projectNumber === 5) {
+    return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/landing%20page%20redesign%20thubmnail.jpg';
   }
 
   return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/project-' + projectNumber + '.webp';
@@ -242,18 +253,21 @@ if (projectDetailTitle) {
   document.querySelectorAll('.project-four-only').forEach(function(content) {
     content.hidden = projectNumber !== 4;
   });
+  document.querySelectorAll('.project-five-only').forEach(function(content) {
+    content.hidden = projectNumber !== 5;
+  });
   document.querySelectorAll('.project-default-title-only').forEach(function(content) {
     content.hidden = projectNumber === 4;
   });
   document.querySelectorAll('.project-default-metadata-only').forEach(function(content) {
-    content.hidden = projectNumber === 2 || projectNumber === 3 || projectNumber === 4;
+    content.hidden = projectNumber === 2 || projectNumber === 3 || projectNumber === 4 || projectNumber === 5;
   });
   var nonSpiritHero = document.querySelector('.project-details-hero-wrap.non-spirit-bound-only .project-detail-default-hero');
   var nonSpiritHeroImage = nonSpiritHero && nonSpiritHero.querySelector('img');
   if (nonSpiritHeroImage) {
     nonSpiritHeroImage.src = getProjectImage(projectNumber);
     nonSpiritHeroImage.alt = projectMetadata.title;
-    nonSpiritHero.hidden = projectNumber === 2 || projectNumber === 3 || projectNumber === 4;
+    nonSpiritHero.hidden = projectNumber === 2 || projectNumber === 3 || projectNumber === 4 || projectNumber === 5;
   }
 
   var podcastHeroVideoPair = document.querySelector('.podcast-hero-video-pair');
@@ -307,7 +321,7 @@ if (projectDetailTitle) {
     content.hidden = projectNumber !== 4;
   });
   document.querySelectorAll('.placeholder-default-only').forEach(function(content) {
-    content.hidden = projectNumber < 5 || projectNumber > 9;
+    content.hidden = projectNumber === 5 || projectNumber < 5 || projectNumber > 9;
   });
 
   var relatedProjectCards = document.querySelectorAll('.project-detail-page .project-area .project-col-3 .project-slider-box');

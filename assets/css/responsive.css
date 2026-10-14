@@ -369,7 +369,8 @@
 
 @media (max-width: 600px) {
     .project-three-outcomes,
-    .project-four-outcomes {
+    .project-four-outcomes,
+    .project-five-outcomes {
         grid-template-columns: minmax(0, 1fr);
     }
     .podcast-summary-grid {
@@ -386,6 +387,9 @@
         height: 380px;
     }
     .swimwear-site-screen {
+        height: 420px;
+    }
+    .project-five-mockup .podcast-desktop-screen {
         height: 420px;
     }
     .podcast-hero-video-pair {
