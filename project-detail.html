@@ -31,10 +31,20 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,100;1,9..40,200&display=swap"
         rel="stylesheet">
 
+    <!-- Reserve slider dimensions before the full stylesheet is applied. -->
+    <style>
+        .project-slider .swiper-slide { width: calc((100% - 36px) / 3); }
+        .project-slider .project-img { aspect-ratio: 601 / 512; overflow: hidden; }
+        .project-slider .project-img img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        @media (max-width: 809px) {
+            .project-slider .swiper-slide { width: 100%; }
+        }
+    </style>
+
     <!-- ===== Stylesheet ===== -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/swiper.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css?v=20261015-project-7-bhs">
+    <link rel="stylesheet" href="./assets/css/style.css?v=20261015-layout-stability">
     <link rel="stylesheet" href="./assets/css/responsive.css?v=20261015-project-7-bhs">
 </head>
 

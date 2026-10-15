@@ -31,10 +31,20 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,100;1,9..40,200&display=swap"
         rel="stylesheet">
 
+    <!-- Reserve slider dimensions before the full stylesheet is applied. -->
+    <style>
+        .project-slider .swiper-slide { width: calc((100% - 36px) / 3); }
+        .project-slider .project-img { aspect-ratio: 601 / 512; overflow: hidden; }
+        .project-slider .project-img img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        @media (max-width: 809px) {
+            .project-slider .swiper-slide { width: 100%; }
+        }
+    </style>
+
     <!-- ===== Stylesheet ===== -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/swiper.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css?v=20261015-layout-stability">
     <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 
@@ -161,7 +171,7 @@
                         <div class="project-slider-box">
                             <a href="project-detail.html" class="overlay-link"></a>
                             <div class="project-img">
-                                <img src="https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/spirit-bound-thumbnail.jpg?v=20261012-thumbnail2" alt="Spirit Bound game artwork">
+                                <img src="https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/spirit-bound-thumbnail.jpg?v=20261012-thumbnail2" alt="Spirit Bound game artwork" width="601" height="512">
                                 <span class="badge-year">
                                     <span class="badge-inner">
                                         <span>2024</span>

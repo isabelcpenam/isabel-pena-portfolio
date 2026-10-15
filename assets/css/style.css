@@ -292,6 +292,15 @@ ol {
     color: rgb(139, 19, 0); 
     flex-shrink: 0;
 }
+.sticky-sidebar .sticky-sidebar-inner .sidebar-top .sidebar-me .sidebar-me-inner .content .location i {
+    display: block;
+    flex: 0 0 13px;
+    width: 13px;
+    height: 13px;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: center;
+}
 
 .menu-lists ul li a {
     display: flex;
@@ -980,6 +989,9 @@ main {
 .project-slider-wrapper {
     overflow: hidden;
 }
+.project-slider .swiper-slide {
+    width: calc((100% - 36px) / 3);
+}
 .project-slider .project-slide-col-2 .project-slider-box + .project-slider-box {
     margin-top: 18px;
 
@@ -1005,9 +1017,19 @@ main {
 .project-slider-box .project-img {
     position: relative;
     margin-bottom: 25px;
+    aspect-ratio: 601 / 512;
+    overflow: hidden;
 }
 .project-slider-box .project-img img {
+    display: block;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 809px) {
+    .project-slider .swiper-slide {
+        width: 100%;
+    }
 }
 .project-slider-box .project-img .badge-year {
     position: absolute;
