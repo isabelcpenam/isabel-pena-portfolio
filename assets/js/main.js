@@ -139,6 +139,13 @@ function getProjectMetadata(projectNumber) {
     };
   }
 
+  if (projectNumber === 6) {
+    return {
+      title: 'Stylized Circus Environment',
+      category: '3D Design'
+    };
+  }
+
   var lastTwoDigits = projectNumber % 100;
   var suffix = lastTwoDigits >= 11 && lastTwoDigits <= 13
     ? 'th'
@@ -163,6 +170,10 @@ function getProjectImage(projectNumber) {
     return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/landing%20page%20redesign%20thubmnail.jpg';
   }
 
+  if (projectNumber === 6) {
+    return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/circus-hero-img3.jpg';
+  }
+
   return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/project-' + projectNumber + '.webp';
 }
 
@@ -181,6 +192,10 @@ function getProjectThumbnail(projectNumber) {
 
   if (projectNumber === 4) {
     return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/petpal-thumbnail.jpg?v=20261012-petpal';
+  }
+
+  if (projectNumber === 6) {
+    return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/circus-thumbnail.jpg';
   }
 
   return getProjectImage(projectNumber);
