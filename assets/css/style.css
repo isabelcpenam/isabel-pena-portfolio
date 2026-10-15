@@ -1656,6 +1656,53 @@ main {
 .project-five-mockup-group {
     margin-top: 18px;
 }
+.project-seven-details .custom-container {
+    display: block;
+}
+.project-seven-problem-solution,
+.project-seven-outcomes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 18px;
+}
+.project-seven-problem-solution .problem-solution-box,
+.project-seven-outcomes .project-details-content-box-2 {
+    min-width: 0;
+    margin-bottom: 0;
+}
+.project-seven-details .project-details-content-box-2-inner .subtitle,
+.project-seven-wireframe > .subtitle,
+.project-seven-mockup-group > .subtitle {
+    display: inline-block;
+    margin: 0 0 18px;
+    padding: 12px 14px;
+}
+.project-seven-details .project-details-content-box-2-inner h5 {
+    margin: 18px 0 8px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    font-weight: 500;
+}
+.project-seven-details .project-details-content-box-2-inner h5:first-of-type {
+    margin-top: 0;
+}
+.project-seven-details .project-details-content-box-2-inner p + h5 {
+    margin-top: 18px;
+}
+.project-seven-wireframe,
+.project-seven-mockup-group {
+    margin-bottom: 18px;
+}
+.project-seven-wireframe .project-img-2-col-box {
+    width: 100%;
+}
+.project-seven-wireframe .project-img-2-col-box:hover img {
+    transform: none;
+}
+.project-seven-mockup {
+    margin-top: 0;
+}
 .project-six-details {
     margin-bottom: 18px;
 }

@@ -146,6 +146,13 @@ function getProjectMetadata(projectNumber) {
     };
   }
 
+  if (projectNumber === 7) {
+    return {
+      title: 'Holistic Coaching Landing Page Design',
+      category: 'UI/UX Design'
+    };
+  }
+
   var lastTwoDigits = projectNumber % 100;
   var suffix = lastTwoDigits >= 11 && lastTwoDigits <= 13
     ? 'th'
@@ -174,6 +181,10 @@ function getProjectImage(projectNumber) {
     return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/circus-hero-img3.jpg';
   }
 
+  if (projectNumber === 7) {
+    return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/hero-bhs-img-3.jpg';
+  }
+
   return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/project-' + projectNumber + '.webp';
 }
 
@@ -196,6 +207,10 @@ function getProjectThumbnail(projectNumber) {
 
   if (projectNumber === 6) {
     return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/circus-thumbnail.jpg';
+  }
+
+  if (projectNumber === 7) {
+    return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/bhs-thubmnail.jpg';
   }
 
   return getProjectImage(projectNumber);
@@ -274,11 +289,14 @@ if (projectDetailTitle) {
   document.querySelectorAll('.project-six-only').forEach(function(content) {
     content.hidden = projectNumber !== 6;
   });
+  document.querySelectorAll('.project-seven-only').forEach(function(content) {
+    content.hidden = projectNumber !== 7;
+  });
   document.querySelectorAll('.project-default-title-only').forEach(function(content) {
     content.hidden = projectNumber === 4;
   });
   document.querySelectorAll('.project-default-metadata-only').forEach(function(content) {
-    content.hidden = projectNumber === 2 || projectNumber === 3 || projectNumber === 4 || projectNumber === 5 || projectNumber === 6;
+    content.hidden = projectNumber === 2 || projectNumber === 3 || projectNumber === 4 || projectNumber === 5 || projectNumber === 6 || projectNumber === 7;
   });
   var nonSpiritHero = document.querySelector('.project-details-hero-wrap.non-spirit-bound-only .project-detail-default-hero');
   var nonSpiritHeroImage = nonSpiritHero && nonSpiritHero.querySelector('img');
@@ -339,7 +357,7 @@ if (projectDetailTitle) {
     content.hidden = projectNumber !== 4;
   });
   document.querySelectorAll('.placeholder-default-only').forEach(function(content) {
-    content.hidden = projectNumber === 5 || projectNumber === 6 || projectNumber < 5 || projectNumber > 9;
+    content.hidden = projectNumber === 5 || projectNumber === 6 || projectNumber === 7 || projectNumber < 5 || projectNumber > 9;
   });
 
   var relatedProjectCards = document.querySelectorAll('.project-detail-page .project-area .project-col-3 .project-slider-box');

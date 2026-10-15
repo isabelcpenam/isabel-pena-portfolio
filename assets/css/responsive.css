@@ -370,7 +370,9 @@
 @media (max-width: 600px) {
     .project-three-outcomes,
     .project-four-outcomes,
-    .project-five-outcomes {
+    .project-five-outcomes,
+    .project-seven-problem-solution,
+    .project-seven-outcomes {
         grid-template-columns: minmax(0, 1fr);
     }
     .podcast-summary-grid {
