@@ -1656,6 +1656,99 @@ main {
 .project-five-mockup-group {
     margin-top: 18px;
 }
+.project-six-details {
+    margin-bottom: 18px;
+}
+.project-six-wide-image {
+    margin-bottom: 18px;
+}
+.project-six-wide-image img,
+.project-six-gallery img,
+.project-six-gallery video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.project-six-overview,
+.project-six-copy-grid,
+.project-six-summary-grid {
+    display: grid;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+.project-six-overview,
+.project-six-copy-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.project-six-summary-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.project-six-section {
+    margin-bottom: 24px;
+}
+.project-six-section > .subtitle,
+.project-six-copy > .subtitle {
+    display: inline-block;
+    margin: 0 0 16px;
+    padding: 10px 14px;
+    color: rgba(255, 255, 255, 0.85);
+}
+.project-six-section > p,
+.project-six-copy > p {
+    margin: 0 0 12px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 24px;
+}
+.project-six-section > p:last-child,
+.project-six-copy > p:last-child {
+    margin-bottom: 0;
+}
+.project-six-gallery {
+    display: grid;
+    gap: 12px;
+}
+.project-six-cast-grid,
+.project-six-materials-grid,
+.project-six-media-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.project-six-process-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.project-six-props-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.project-six-gallery video {
+    background: #080808;
+}
+.project-six-summary-grid .problem-solution-box {
+    min-width: 0;
+}
+@media (max-width: 700px) {
+    .project-detail-header.section-header {
+        box-sizing: border-box;
+        min-width: 0;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .project-detail-header .animation-texts-wrap,
+    .project-detail-header .animation-text-inner {
+        box-sizing: border-box;
+        min-width: 0;
+        width: 100%;
+    }
+    .project-six-overview,
+    .project-six-copy-grid,
+    .project-six-summary-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .project-six-process-grid,
+    .project-six-props-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
 .project-five-mockup-label {
     display: inline-block;
     margin: 18px 0 0;

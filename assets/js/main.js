@@ -271,11 +271,14 @@ if (projectDetailTitle) {
   document.querySelectorAll('.project-five-only').forEach(function(content) {
     content.hidden = projectNumber !== 5;
   });
+  document.querySelectorAll('.project-six-only').forEach(function(content) {
+    content.hidden = projectNumber !== 6;
+  });
   document.querySelectorAll('.project-default-title-only').forEach(function(content) {
     content.hidden = projectNumber === 4;
   });
   document.querySelectorAll('.project-default-metadata-only').forEach(function(content) {
-    content.hidden = projectNumber === 2 || projectNumber === 3 || projectNumber === 4 || projectNumber === 5;
+    content.hidden = projectNumber === 2 || projectNumber === 3 || projectNumber === 4 || projectNumber === 5 || projectNumber === 6;
   });
   var nonSpiritHero = document.querySelector('.project-details-hero-wrap.non-spirit-bound-only .project-detail-default-hero');
   var nonSpiritHeroImage = nonSpiritHero && nonSpiritHero.querySelector('img');
@@ -336,7 +339,7 @@ if (projectDetailTitle) {
     content.hidden = projectNumber !== 4;
   });
   document.querySelectorAll('.placeholder-default-only').forEach(function(content) {
-    content.hidden = projectNumber === 5 || projectNumber < 5 || projectNumber > 9;
+    content.hidden = projectNumber === 5 || projectNumber === 6 || projectNumber < 5 || projectNumber > 9;
   });
 
   var relatedProjectCards = document.querySelectorAll('.project-detail-page .project-area .project-col-3 .project-slider-box');
