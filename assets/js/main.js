@@ -211,7 +211,7 @@ document.querySelectorAll('.projects-page .project-slider-box, .project-slider .
     projectImage.alt = projectMetadata.title;
   }
 
-  card.querySelectorAll('a[href="project-detail.html"]').forEach(function(link) {
+  card.querySelectorAll('a[href^="project-detail.html"]').forEach(function(link) {
     link.href = 'project-detail.html?project=' + projectNumber;
   });
 });
