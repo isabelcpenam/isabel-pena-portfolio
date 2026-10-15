@@ -369,7 +369,7 @@ if (projectDetailTitle) {
 
       card.querySelector('.project-content h3').textContent = relatedProjectMetadata.title;
       card.querySelector('.project-content p').textContent = relatedProjectMetadata.category;
-      projectImage.src = getProjectImage(relatedProjectNumber);
+      projectImage.src = getProjectThumbnail(relatedProjectNumber);
       projectImage.alt = relatedProjectMetadata.title;
 
       card.querySelectorAll('a').forEach(function(link) {
