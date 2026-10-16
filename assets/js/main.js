@@ -97,7 +97,7 @@ if ($('#current-time').length) {
   document.querySelector('#current-time').textContent = currentTime;
 }
 
-var hiddenProjectNumbers = [10, 11, 12, 13, 14, 15];
+var hiddenProjectNumbers = [9, 10, 11, 12, 13, 14, 15];
 
 function isHiddenProjectNumber(projectNumber) {
   return hiddenProjectNumbers.indexOf(projectNumber) !== -1;
@@ -218,7 +218,7 @@ function getProjectThumbnail(projectNumber) {
 
 document.querySelectorAll('.projects-page .project-slider-box, .project-slider .project-slider-box').forEach(function(card, index) {
   var projectNumber = index + 1;
-  if (projectNumber > 9) {
+  if (projectNumber > 8) {
     card.hidden = true;
     return;
   }
@@ -357,12 +357,12 @@ if (projectDetailTitle) {
     content.hidden = projectNumber !== 4;
   });
   document.querySelectorAll('.placeholder-default-only').forEach(function(content) {
-    content.hidden = projectNumber === 5 || projectNumber === 6 || projectNumber === 7 || projectNumber < 5 || projectNumber > 9;
+    content.hidden = projectNumber === 5 || projectNumber === 6 || projectNumber === 7 || projectNumber < 5 || projectNumber > 8;
   });
 
   var relatedProjectCards = document.querySelectorAll('.project-detail-page .project-area .project-col-3 .project-slider-box');
   if (relatedProjectCards.length) {
-    var availableProjects = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    var availableProjects = [1, 2, 3, 4, 5, 6, 7, 8]
       .filter(function(candidateProject) {
         return candidateProject !== projectNumber;
       });
