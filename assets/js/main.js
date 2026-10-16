@@ -201,7 +201,7 @@ function getProjectImage(projectNumber) {
 
 function getProjectThumbnail(projectNumber) {
   if (projectNumber === 1) {
-    return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/spirit-bound-thumbnail.jpg?v=20261012-thumbnail2';
+    return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/spirit-bounf-thubmnail%20portfolio.jpg';
   }
 
   if (projectNumber === 2) {
@@ -213,7 +213,7 @@ function getProjectThumbnail(projectNumber) {
   }
 
   if (projectNumber === 4) {
-    return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/petpal-thumbnail.jpg?v=20261012-petpal';
+    return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/petpapl-editable%20thubmnail%20portfolio.jpg';
   }
 
   if (projectNumber === 6) {
