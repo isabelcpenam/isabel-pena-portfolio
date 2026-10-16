@@ -153,6 +153,13 @@ function getProjectMetadata(projectNumber) {
     };
   }
 
+  if (projectNumber === 8) {
+    return {
+      title: 'Animated Infographic Video',
+      category: 'Motion Graphics'
+    };
+  }
+
   var lastTwoDigits = projectNumber % 100;
   var suffix = lastTwoDigits >= 11 && lastTwoDigits <= 13
     ? 'th'
@@ -185,6 +192,10 @@ function getProjectImage(projectNumber) {
     return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/hero-bhs-img-3.jpg';
   }
 
+  if (projectNumber === 8) {
+    return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/thubmnail-video-project.jpg';
+  }
+
   return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/project-' + projectNumber + '.webp';
 }
 
@@ -211,6 +222,10 @@ function getProjectThumbnail(projectNumber) {
 
   if (projectNumber === 7) {
     return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/bhs-thubmnail.jpg';
+  }
+
+  if (projectNumber === 8) {
+    return 'https://pub-dd5b24c34c3b4eed838f8b9eaa2c9873.r2.dev/thubmnail-video-project.jpg';
   }
 
   return getProjectImage(projectNumber);
@@ -292,18 +307,21 @@ if (projectDetailTitle) {
   document.querySelectorAll('.project-seven-only').forEach(function(content) {
     content.hidden = projectNumber !== 7;
   });
+  document.querySelectorAll('.project-eight-only').forEach(function(content) {
+    content.hidden = projectNumber !== 8;
+  });
   document.querySelectorAll('.project-default-title-only').forEach(function(content) {
     content.hidden = projectNumber === 4;
   });
   document.querySelectorAll('.project-default-metadata-only').forEach(function(content) {
-    content.hidden = projectNumber === 2 || projectNumber === 3 || projectNumber === 4 || projectNumber === 5 || projectNumber === 6 || projectNumber === 7;
+    content.hidden = projectNumber === 2 || projectNumber === 3 || projectNumber === 4 || projectNumber === 5 || projectNumber === 6 || projectNumber === 7 || projectNumber === 8;
   });
   var nonSpiritHero = document.querySelector('.project-details-hero-wrap.non-spirit-bound-only .project-detail-default-hero');
   var nonSpiritHeroImage = nonSpiritHero && nonSpiritHero.querySelector('img');
   if (nonSpiritHeroImage) {
     nonSpiritHeroImage.src = getProjectImage(projectNumber);
     nonSpiritHeroImage.alt = projectMetadata.title;
-    nonSpiritHero.hidden = projectNumber === 2 || projectNumber === 3 || projectNumber === 4 || projectNumber === 5;
+    nonSpiritHero.hidden = projectNumber === 2 || projectNumber === 3 || projectNumber === 4 || projectNumber === 5 || projectNumber === 8;
   }
 
   var podcastHeroVideoPair = document.querySelector('.podcast-hero-video-pair');
@@ -341,6 +359,49 @@ if (projectDetailTitle) {
     }
   }
 
+  var fullVideo = document.getElementById('project8-full-video');
+  var fullVideoWrapper = document.querySelector('.project-eight-video-wrapper');
+  var playPauseBtn = document.querySelector('.video-play-pause-btn');
+
+  if (fullVideo && playPauseBtn) {
+    var toggleFullVideo = function() {
+      if (fullVideo.paused || fullVideo.ended) {
+        fullVideo.play();
+      } else {
+        fullVideo.pause();
+      }
+    };
+
+    playPauseBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleFullVideo();
+    });
+
+    fullVideo.addEventListener('play', function() {
+      if (fullVideoWrapper) {
+        fullVideoWrapper.classList.add('is-playing');
+      }
+      playPauseBtn.innerHTML = '<i class="las la-pause"></i>';
+      playPauseBtn.setAttribute('aria-label', 'Pause video');
+    });
+
+    fullVideo.addEventListener('pause', function() {
+      if (fullVideoWrapper) {
+        fullVideoWrapper.classList.remove('is-playing');
+      }
+      playPauseBtn.innerHTML = '<i class="las la-play"></i>';
+      playPauseBtn.setAttribute('aria-label', 'Play video');
+    });
+
+    fullVideo.addEventListener('ended', function() {
+      if (fullVideoWrapper) {
+        fullVideoWrapper.classList.remove('is-playing');
+      }
+      playPauseBtn.innerHTML = '<i class="las la-play"></i>';
+      playPauseBtn.setAttribute('aria-label', 'Play video');
+    });
+  }
+
   document.querySelectorAll('.spirit-bound-only').forEach(function(section) {
     section.hidden = projectNumber !== 1;
   });
@@ -357,7 +418,7 @@ if (projectDetailTitle) {
     content.hidden = projectNumber !== 4;
   });
   document.querySelectorAll('.placeholder-default-only').forEach(function(content) {
-    content.hidden = projectNumber === 5 || projectNumber === 6 || projectNumber === 7 || projectNumber < 5 || projectNumber > 8;
+    content.hidden = projectNumber === 5 || projectNumber === 6 || projectNumber === 7 || projectNumber === 8 || projectNumber < 5 || projectNumber > 8;
   });
 
   var relatedProjectCards = document.querySelectorAll('.project-detail-page .project-area .project-col-3 .project-slider-box');

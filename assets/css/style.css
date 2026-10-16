@@ -1818,6 +1818,203 @@ main {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+/* Project 8 - Animated Infographic Video */
+.project-eight-details {
+    margin-bottom: 24px;
+}
+.project-eight-overview,
+.project-eight-summary-grid {
+    display: grid;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+.project-eight-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.project-eight-summary-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.project-eight-summary-grid .problem-solution-box {
+    min-width: 0;
+}
+.project-eight-summary-grid .content-box {
+    height: calc(100% - 44px);
+}
+.project-eight-summary-grid .content-box p {
+    margin: 0;
+}
+.project-eight-section {
+    margin-bottom: 24px;
+}
+.project-eight-section > .subtitle,
+.project-eight-copy > .subtitle {
+    display: inline-block;
+    margin: 0 0 16px;
+    padding: 10px 14px;
+    color: rgba(255, 255, 255, 0.85);
+}
+.project-eight-section > p,
+.project-eight-copy > p {
+    margin: 0 0 12px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 24px;
+}
+.project-eight-section > p:last-child,
+.project-eight-copy > p:last-child {
+    margin-bottom: 0;
+}
+.project-eight-video-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 16px 0;
+}
+.project-eight-video-item {
+    position: relative;
+    border: 0.75px solid rgba(252, 252, 252, 0.08);
+    background: #0d0d0d;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 4px 14px;
+    overflow: hidden;
+}
+.project-eight-video-item video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #000;
+}
+.project-eight-video-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    padding: 4px 10px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(18, 18, 18, 0.85);
+    border: 1px solid rgba(252, 252, 252, 0.1);
+    backdrop-filter: blur(8px);
+    pointer-events: none;
+}
+.project-eight-timeline-img {
+    margin: 16px 0;
+    border: 0.75px solid rgba(252, 252, 252, 0.08);
+    background: #0d0d0d;
+    overflow: hidden;
+}
+.project-eight-timeline-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.project-eight-video-frame {
+    max-width: 1100px;
+    margin: 16px auto 0;
+    overflow: hidden;
+    border: 1px solid rgba(252, 252, 252, 0.1);
+    background: #100807;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 12px 36px;
+}
+.project-eight-frame-bar {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-bottom: 1px solid rgba(252, 252, 252, 0.08);
+    background: linear-gradient(90deg, rgba(61, 0, 0, 0.65), rgba(24, 12, 10, 0.95));
+}
+.project-eight-frame-bar .frame-dot {
+    width: 10px;
+    height: 10px;
+    flex: 0 0 10px;
+    border-radius: 50%;
+}
+.project-eight-frame-bar .frame-dot-red { background: #a5483e; }
+.project-eight-frame-bar .frame-dot-yellow { background: #b78c46; }
+.project-eight-frame-bar .frame-dot-green { background: #66815b; }
+.project-eight-frame-bar .frame-title {
+    margin: 0 auto;
+    padding: 5px 18px;
+    border: 1px solid rgba(252, 252, 252, 0.06);
+    background: rgba(0, 0, 0, 0.24);
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.project-eight-video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+.project-eight-video-wrapper video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+}
+.project-eight-video-wrapper .video-play-pause-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(18, 8, 8, 0.8);
+    color: #fff;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    transition: all 0.25s ease;
+    opacity: 0.9;
+    z-index: 5;
+}
+.project-eight-video-wrapper .video-play-pause-btn:hover {
+    background: #950c0c;
+    transform: translate(-50%, -50%) scale(1.08);
+    opacity: 1;
+}
+.project-eight-video-wrapper.is-playing .video-play-pause-btn {
+    opacity: 0;
+    pointer-events: none;
+}
+.project-eight-video-wrapper:hover.is-playing .video-play-pause-btn {
+    opacity: 0.75;
+    pointer-events: auto;
+}
+.project-eight-credits {
+    margin-top: 24px;
+}
+.project-eight-credits .subtitle {
+    display: inline-block;
+    margin: 0 0 18px;
+    padding: 12px 14px;
+}
+@media (max-width: 768px) {
+    .project-eight-overview,
+    .project-eight-summary-grid,
+    .project-eight-video-pair {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .project-eight-credits .team-credit-list {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
 .project-five-mockup-label {
     display: inline-block;
     margin: 18px 0 0;
@@ -1927,12 +2124,14 @@ main {
     margin: 0 0 18px;
     padding: 12px 14px;
 }
+.project-eight-credits .team-credit-list,
 .spirit-bound-credits .team-credit-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px 28px;
     margin: 20px 0;
 }
+.project-eight-credits .team-credit-list li,
 .spirit-bound-credits .team-credit-list li {
     display: flex;
     flex-direction: column;
@@ -1942,6 +2141,8 @@ main {
     line-height: 1.5;
     font-weight: 300;
 }
+.project-eight-credits .team-credit-list strong,
+.project-eight-credits .project-details-content-box-2-inner p strong,
 .spirit-bound-credits .team-credit-list strong,
 .spirit-bound-credits .project-details-content-box-2-inner p strong {
     color: rgba(255, 255, 255, 0.85);
