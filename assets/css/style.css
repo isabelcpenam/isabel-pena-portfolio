@@ -523,30 +523,42 @@ main {
     border-radius: 0;
     position: relative;
     flex: none;
+    display: inline-block;
+    transform-origin: center center;
     -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='14.4 0.1 13.1 24.8'%3E%3Cpath fill='%23000' d='M27.5.1h0v7.4s0,5.3,0,5.3l-5.3,3.1v2.4s0,6.6,0,6.6l-7.8-4.4v-8.5s0-4.4,0-4.4l2.5-1.4v7.5s0,5.1,0,5.1l2.8,1.5V6.7s0-2.1,0-2.1L27.5.1ZM25,11v-6.4s-2.8,1.7-2.8,1.7v6.4s2.8-1.6,2.8-1.6Z'/%3E%3C/svg%3E") no-repeat center / contain;
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='14.4 0.1 13.1 24.8'%3E%3Cpath fill='%23000' d='M27.5.1h0v7.4s0,5.3,0,5.3l-5.3,3.1v2.4s0,6.6,0,6.6l-7.8-4.4v-8.5s0-4.4,0-4.4l2.5-1.4v7.5s0,5.1,0,5.1l2.8,1.5V6.7s0-2.1,0-2.1L27.5.1ZM25,11v-6.4s-2.8,1.7-2.8,1.7v6.4s2.8-1.6,2.8-1.6Z'/%3E%3C/svg%3E") no-repeat center / contain;
     filter: drop-shadow(0 0 3px rgba(0, 163, 76, 0.45));
+    animation: heartbeat 1.8s ease-in-out infinite;
 }
-.available-link .online-dot::before {
-    content: '';
-    background: inherit;
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-    -webkit-mask: inherit;
-    mask: inherit;
-    animation: onlineAnim 1.6s infinite cubic-bezier(0.2, 0.6, 0.35, 1);
-}
-@keyframes onlineAnim {
+@keyframes heartbeat {
     0% {
         transform: scale(1);
-        opacity: 0.85;
+        filter: drop-shadow(0 0 3px rgba(0, 163, 76, 0.45));
+    }
+    14% {
+        transform: scale(1.22);
+        filter: drop-shadow(0 0 6px rgba(0, 163, 76, 0.8));
+    }
+    28% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 3px rgba(0, 163, 76, 0.45));
+    }
+    42% {
+        transform: scale(1.14);
+        filter: drop-shadow(0 0 5px rgba(0, 163, 76, 0.7));
+    }
+    70% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 3px rgba(0, 163, 76, 0.45));
     }
     100% {
-        transform: scale(2.4);
-        opacity: 0;
+        transform: scale(1);
+        filter: drop-shadow(0 0 3px rgba(0, 163, 76, 0.45));
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .available-link .online-dot {
+        animation: none;
     }
 }
 .hero-content-top {
